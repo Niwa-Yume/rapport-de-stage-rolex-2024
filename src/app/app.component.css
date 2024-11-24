@@ -1,7 +1,14 @@
-:host {
-  background-color: var(--rolex-green);
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
 }
 
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
 section {
   margin-bottom: 2rem;
   background-color: var(--rolex-green);
@@ -13,23 +20,6 @@ section {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   min-height: 90vh;
   background-color: var(--rolex-green);
-}
-
-.title {
-  color: var(--rolex-white);
-  font-size: 3.5rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  font-family: 'Helvetica', Arial, sans-serif;
-}
-
-.subtitle {
-  color: var(--rolex-gold);
-  font-size: 1.5rem;
-  font-weight: 300;
-  letter-spacing: 1px;
 }
 
 /*bouton de naviation */
