@@ -1,0 +1,16 @@
+<section class="hero-section">
+  @if (!isTechStack) {
+    <h1 class="title">Stage en développement web chez Rolex</h1>
+  <p class="subtitle">Allier innovation digitale et expérience horlogère</p>
+  <div>
+    <p class="subtitle">La perfection n'est pas atteinte quand il n'y a plus rien à ajouter,
+    mais quand il n'y a plus rien à retirer."</p>
+  </div>
+  <div class="nav-buttons">
+    <button [routerLink]="['/']" [disabled]="true">Précédent</button>
+    <button [routerLink]="['/tech-stack']">Suivant</button>
+  </div>
+  }
+  
+</section>
+<router-outlet></router-outlet>

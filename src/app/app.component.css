@@ -1,0 +1,62 @@
+:host {
+  background-color: var(--rolex-green);
+}
+
+section {
+  margin-bottom: 2rem;
+  background-color: var(--rolex-green);
+}
+
+.hero-section {
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  min-height: 90vh;
+  background-color: var(--rolex-green);
+}
+
+.title {
+  color: var(--rolex-white);
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.subtitle {
+  color: var(--rolex-gold);
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/*bouton de naviation */
+.nav-buttons {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+.nav-buttons button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--rolex-gold, #a37e2c);
+  color: var(--button-color, #ffffff);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+}
+.nav-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.nav-buttons button:not(:disabled):hover {
+  background-color: #d4af37;
+  transform: translateY(-2px);
+}

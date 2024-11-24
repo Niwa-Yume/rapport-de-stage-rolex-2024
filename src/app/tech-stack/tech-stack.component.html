@@ -1,0 +1,9 @@
+<div class="tech-stack">
+    <h2>Technologies utilisées durant mon stage</h2>
+    <div class="icons">
+      <div *ngFor="let tech of techStack | keyvalue" class="icon">
+        <img [src]="tech.value" [alt]="tech.key" />
+        <span>{{ tech.key }}</span>
+      </div>
+    </div>
+  </div>

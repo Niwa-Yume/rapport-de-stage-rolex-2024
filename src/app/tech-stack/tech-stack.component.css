@@ -1,0 +1,19 @@
+.tech-stack {
+    text-align: center;
+  }
+  
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .icon {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .icon img {
+    width: 50px; /* Ajustez la taille selon vos besoins */
+    height: 50px; /* Ajustez la taille selon vos besoins */
+  }
