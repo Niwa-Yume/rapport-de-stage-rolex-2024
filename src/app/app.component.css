@@ -23,30 +23,4 @@ section {
 }
 
 /*bouton de naviation */
-.nav-buttons {
-  position: absolute;
-  bottom: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 1rem;
-}
-.nav-buttons button {
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 25px;
-  background-color: var(--rolex-gold, #a37e2c);
-  color: var(--button-color, #ffffff);
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 1.2rem;
-}
-.nav-buttons button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-.nav-buttons button:not(:disabled):hover {
-  background-color: #d4af37;
-  transform: translateY(-2px);
-}
+
