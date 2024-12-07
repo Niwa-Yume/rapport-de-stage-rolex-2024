@@ -28,10 +28,14 @@ import { CommonModule } from '@angular/common';
       flex: 1;
     }
     .nav-buttons {
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-    }
+  position: fixed; /* Change la position pour qu'elle soit fixe */
+  bottom: 2rem; /* Espace depuis le bas de la page */
+  left: 50%; /* Centre horizontalement */
+  transform: translateX(-50%); /* Ajuste pour centrer */
+  display: flex;
+  gap: 1rem;
+}
+
   `]
 })
 export class SlideLayoutComponent {

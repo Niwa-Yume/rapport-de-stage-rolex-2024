@@ -1,5 +1,5 @@
 .mission-container {
-    padding: 2rem;
+    padding: 1rem;
     background-color: var(--rolex-background);
     border-radius: 8px;
     /* Ajout du display flex pour centrer le contenu verticalement */
@@ -26,6 +26,8 @@ p {
     justify-content: center;
     align-items: center;
     margin-top: 2.5rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 @keyframes twisterInUp {
@@ -46,4 +48,10 @@ p {
     animation: twisterInUp 1s ease-in;
     animation-fill-mode: forwards;
     transform-origin: center;
+}
+
+@media (min-width: 768px) {
+    .mission-container {
+        padding: 2rem;
+    }
 }
