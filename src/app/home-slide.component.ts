@@ -25,7 +25,7 @@ import { CommonModule } from '@angular/common';
   styles: [`
     .hero-container {
       position: relative;
-      height: 80vh;
+      height: 90vh;
       width: 100%;
       overflow: hidden;
       color: white;

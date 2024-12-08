@@ -20,7 +20,7 @@ import { CommonModule } from '@angular/common';
   `,
   styles: [`
     .slide-container {
-      height: 100vh;
+      height: 80vh;
       display: flex;
       flex-direction: column;
     }

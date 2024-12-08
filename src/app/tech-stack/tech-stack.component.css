@@ -2,7 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  align-self: center;
   width: 100%;
+
   min-height: 100vh;
   padding: 2rem;
   box-sizing: border-box;
@@ -12,13 +15,13 @@
 /* Media query pour les écrans plus petits */
 @media (max-width: 768px) {
   .tech-stack {
-    padding: 1rem; /* Réduit le padding sur les petits écrans */
+    padding: 1rem; 
   }
 }
 
 .icons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   width: 100%;
   max-width: 100%;

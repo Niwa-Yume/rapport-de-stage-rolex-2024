@@ -17,6 +17,7 @@ section {
 .hero-section {
   padding: 2rem;
   min-height: 90vh;
+  max-width: 60%;
   background-color: var(--rolex-green);
   display: flex;
   flex-direction: column;

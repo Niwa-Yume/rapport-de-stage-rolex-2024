@@ -12,7 +12,7 @@ import { RouterOutlet, RouterModule } from '@angular/router';
 })
 export class TechStackComponent {
   techStack = {
-    'HTML': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+    'RxJs': 'https://rxjs.dev/generated/images/marketing/home/Rx_Logo-512-512.png',
     'CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
     'TypeScript': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png',
     'Angular': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
