@@ -43,6 +43,7 @@ export class SlideLayoutComponent {
     '',  
     'tech-stack',        
     'app-mission',
+    'about-rolex',
   
   ];
 
