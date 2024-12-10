@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    /* Couleurs principales de Rolex */
+    --rolex-green: #006039;
+    --rolex-gold: #a37e2c;
+    --rolex-white: #ffffff;
+    --rolex-black: #212121;
+  
+    /* Couleurs des éléments spécifiques */
+    --bg-color: #006039;
+    --title-color: var(--rolex-gold);
+    --subtitle-color: var(--rolex-white);
+    --button-color: var(--rolex-white);
+    --dot-color: var(--rolex-white);
+  
+    /* Couleurs des composants */
+    --progress-bg: var(--rolex-white);
+    --testimonial-bg: rgba(255, 255, 255, 0.1);  /* Fond semi-transparent */
+    --author-color: var(--rolex-white);
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--rolex-green);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+.title {
+  color: var(--rolex-white);
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  color: var(--rolex-gold);
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--rolex-green);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+.nav-buttons button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--rolex-gold, #a37e2c);
+  color: var(--button-color, #ffffff);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+}
+.nav-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.nav-buttons button:not(:disabled):hover {
+  background-color: #d4af37;
+  transform: translateY(-2px);
+}

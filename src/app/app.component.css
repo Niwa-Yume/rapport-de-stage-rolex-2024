@@ -1,0 +1,36 @@
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+section {
+  margin-bottom: 2rem;
+  background-color: var(--rolex-green);
+}
+
+.hero-section {
+  padding: 2rem;
+  min-height: 90vh;
+  max-width: 60%;
+  background-color: var(--rolex-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media query pour les écrans plus petits */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 1rem;
+  }
+}
+
+/*bouton de naviation */
+
