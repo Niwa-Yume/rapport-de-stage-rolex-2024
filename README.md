@@ -1,6 +1,6 @@
 # SiteStage
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
+[lien news room ](https://newsroom.rolex.com/?cmpid=rolexcom_newsroom)
 
 ## Development server
 
