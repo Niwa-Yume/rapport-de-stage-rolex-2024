@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
         
         <div class="quote-container">
           <div class="quote">
-            <img src="rolex batiment.jpg" alt="batiment" class="responsive-image">
+            <img src="rolex batiment.jpg" alt="batiment" class="responsive-image" style="max-height: 55vh;">
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@ import { CommonModule } from '@angular/common';
   styles: [`
     .hero-container {
       position: relative;
-      height: 90vh;
+      height: 100%;
       width: 100%;
       overflow: hidden;
       color: white;
@@ -36,15 +36,16 @@ import { CommonModule } from '@angular/common';
     }
 
     .image-wrapper {
-  position: relative;
-  width: 100%;
-  height: auto; /* Permet à l'image de s'ajuster */
-  z-index: 1; /* S'assure que l'image est en dessous du contenu */
-}
+      position: relative;
+      width: 70%;
+      height: 80%; /* Permet à l'image de s'ajuster */
+      z-index: 1; /* S'assure que l'image est en dessous du contenu */
+    }
 
     .hero-image {
       width: 100%;
-      height: 100%;
+      height: 80%;
+      max-height: 50vh;
       object-fit: cover;
       object-position: center;
       transform: scale(1.1);
@@ -73,6 +74,7 @@ import { CommonModule } from '@angular/common';
       padding: 0 2rem;
       text-align: center;
       z-index: 2;
+      margin-top: 20px;
     }
 
     .title {
@@ -144,20 +146,54 @@ import { CommonModule } from '@angular/common';
 
     @media (max-width: 768px) {
       .title {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
       }
       
       .subtitle {
-        font-size: 1.25rem;
+        font-size: 0.9rem;
       }
       
       .quote {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+      }
+
+      .content-container {
+        padding: 0 1rem;
+        margin-top: 15px;
       }
 
       .hero-image {
         object-position: center;
         transform: scale(1.05);
+        max-height: 40vh;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .title {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 0.8rem;
+      }
+      
+      .quote {
+        font-size: 0.9rem;
+      }
+
+      .hero-image {
+        height: auto;
+        transform: scale(1);
+        max-height: 30vh;
+      }
+
+      .button-container {
+        flex-direction: column;
+      }
+
+      .content-container {
+        margin-top: 10px;
       }
     }
   `]
