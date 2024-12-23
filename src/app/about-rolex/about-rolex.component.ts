@@ -29,9 +29,7 @@ export class AboutRolexComponent implements OnInit{
     { year: 1905, event: 'Fondation de Rolex par Hans Wilsdorf' },
     { year: 1915, event: 'Brevet du système de remontage automatique' },
     { year: 1985, event: 'Utilisation pionnière du saphir synthétique' },
-    { year: 2000, event: 'Nouveau mouvement automatique calibre 4130' },
     { year: 2012, event: 'Lancement du système Syloxi en silicium' },
-    { year: 2015, event: 'Certification Superlative Chronometer' },
     { year: 2020, event: 'Nouveaux processus de production automatisés' }
  ];
   activeSection = '';
