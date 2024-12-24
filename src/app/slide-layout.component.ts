@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   template: `
     <div class="slide-container">
       <div class="slide-content">
+
         <router-outlet></router-outlet>
       </div>
       
@@ -28,13 +29,19 @@ import { CommonModule } from '@angular/common';
       flex: 1;
     }
     .nav-buttons {
-  position: fixed; /* Change la position pour qu'elle soit fixe */
-  bottom: 2rem; /* Espace depuis le bas de la page */
-  left: 50%; /* Centre horizontalement */
-  transform: translateX(-50%); /* Ajuste pour centrer */
-  display: flex;
-  gap: 1rem;
-}
+      position: fixed; /* Change la position pour qu'elle soit fixe */
+      bottom: 2rem; /* Espace depuis le bas de la page */
+      left: 50%; /* Centre horizontalement */
+      transform: translateX(-50%); /* Ajuste pour centrer */
+      display: flex;
+      gap: 1rem;
+    }
+    .background-iframe {
+      background:transparent;
+      width: 100%; /* Prend toute la largeur */
+      height: 100%; /* Prend toute la hauteur */
+      z-index: 0; /* Met l'iframe derrière le contenu */
+    }
 
   `]
 })
@@ -44,6 +51,9 @@ export class SlideLayoutComponent {
     'tech-stack',        
     'app-mission',
     'about-rolex',
+    'app-expectations',
+    'app-mes-travaux',
+    'app-conclusion'
   
   ];
 
