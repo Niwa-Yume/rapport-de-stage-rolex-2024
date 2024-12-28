@@ -21,6 +21,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
 @keyframes fadeIn {
@@ -155,23 +156,31 @@ button:hover {
 .reality-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 1rem; 
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 2rem auto;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); 
-  width: 100%; 
-  max-width: 80%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s;
 }
+
+.reality-card:hover {
+  transform: translateY(-5px);
+}
+
 .reality-card h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #d4af37; 
   margin-bottom: 1rem; 
+  text-align: center;
 }
 
 .reality-card p {
-  line-height: 1.6; 
+  line-height: 1.8;
   color: #e5e5e5; 
   margin-bottom: 1rem; 
-  font-size: 1rem; 
+  font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {
@@ -186,4 +195,14 @@ button:hover {
     padding: 0.5rem;
     max-width: 95%;
   }
+}
+
+.reality-card ol {
+  list-style-type: decimal;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.reality-card li {
+  margin-top: 0.5rem;
 }
