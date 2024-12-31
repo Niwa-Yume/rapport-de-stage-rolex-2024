@@ -25,12 +25,11 @@ section {
   align-items: center;
 }
 
-/* Media query pour les écrans plus petits */
 @media (max-width: 768px) {
   .hero-section {
     padding: 1rem;
   }
 }
 
-/*bouton de naviation */
+
 
