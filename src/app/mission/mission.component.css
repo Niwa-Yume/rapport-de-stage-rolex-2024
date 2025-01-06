@@ -24,10 +24,6 @@
   transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-.content-container.motion-safe:animate-fadeInUp {
-  animation: fadeInUp 1s ease-out;
-}
-
 .motion-safe:animate-bounce {
   animation: bounce 2s infinite;
 }
