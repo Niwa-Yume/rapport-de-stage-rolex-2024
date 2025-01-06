@@ -1,59 +1,46 @@
 :host {
-  display: block;
   min-height: 100vh;
   color: #fff;
   padding: 1rem;
   font-family: 'Arial', sans-serif;
   overflow: hidden;
-}
-
-.expectations-container {
-  position: relative;
-  overflow-x: hidden;
-  padding: 1rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
-  border-radius: 1rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 0.5s ease;
-  max-width: 100%;
-  margin: auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.expectations-container, .reality-card {
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  flex: 1 1 45%;
+  padding: 2rem;
+  margin: 1rem;
+  min-width: 300px;
+  max-width: 600px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.expectations-container:hover, .reality-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  text-align: center;
   color: #d4af37;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  animation: slideIn 0.5s ease;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 h2 {
@@ -62,39 +49,37 @@ h2 {
   color: #d4af37;
   border-bottom: 2px solid rgba(212, 175, 55, 0.5);
   padding-bottom: 0.5rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
 h2:hover {
   transform: translateY(-5px);
 }
 
-p {
+p, li {
   line-height: 1.6;
   color: #e5e5e5;
   margin-bottom: 1rem;
   font-size: 1rem;
-  opacity: 0;
-  animation: fadeInText 0.5s ease forwards;
 }
 
-@keyframes fadeInText {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.nav-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+.reality-card ol {
+  list-style-type: none;
+  counter-reset: listCounter;
   margin-top: 1rem;
-  flex-wrap: wrap;
+  padding-left: 1rem;
+}
+
+.reality-card li::before {
+  counter-increment: listCounter;
+  content: counter(listCounter) ". ";
+  color: #d4af37;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.reality-item {
+  margin-bottom: 1.5rem;
 }
 
 button {
@@ -109,6 +94,7 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 200px;
+  margin: 0.5rem auto;
 }
 
 button:hover {
@@ -117,6 +103,10 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  .expectations-container, .reality-card {
+    flex: 1 1 90%;
+  }
+
   h1 {
     font-size: 2rem;
   }
@@ -125,21 +115,16 @@ button:hover {
     font-size: 1.5rem;
   }
 
-  p {
+  p, li {
     font-size: 0.9rem;
-  }
-
-  .expectations-container {
-    padding: 1rem;
-  }
-
-  .nav-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  .expectations-container, .reality-card {
+    flex: 1 1 100%;
+  }
+
   h1 {
     font-size: 1.8rem;
   }
@@ -148,61 +133,11 @@ button:hover {
     font-size: 1.3rem;
   }
 
-  p {
+  p, li {
     font-size: 0.8rem;
   }
-}
 
-.reality-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 1rem; 
-  padding: 2rem;
-  margin: 2rem auto;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.3s;
-}
-
-.reality-card:hover {
-  transform: translateY(-5px);
-}
-
-.reality-card h2 {
-  font-size: 2.2rem;
-  color: #d4af37; 
-  margin-bottom: 1rem; 
-  text-align: center;
-}
-
-.reality-card p {
-  line-height: 1.8;
-  color: #e5e5e5; 
-  margin-bottom: 1rem; 
-  font-size: 1.1rem;
-}
-
-@media (max-width: 768px) {
   .reality-card {
     padding: 1rem;
-    max-width: 90%;
   }
-}
-
-@media (max-width: 480px) {
-  .reality-card {
-    padding: 0.5rem;
-    max-width: 95%;
-  }
-}
-
-.reality-card ol {
-  list-style-type: decimal;
-  margin-top: 1rem;
-  padding-left: 1.5rem;
-}
-
-.reality-card li {
-  margin-top: 0.5rem;
 }

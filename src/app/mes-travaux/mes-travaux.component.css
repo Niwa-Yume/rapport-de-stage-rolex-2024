@@ -8,31 +8,31 @@
 }
 
 .mes-travaux-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   padding: 1rem;
 }
 
+/* Ajustements pour un effet de grille "Bento" */
 .image-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  max-width: 300px; /* Ajustez la largeur maximale selon vos besoins */
   overflow: hidden;
   transition: transform 0.3s;
-}
-
-.image-card:hover {
-  transform: scale(1.05);
+  position: relative;
 }
 
 .image-card img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 300px; /* Hauteur ajustée pour les images */
+  object-fit: cover; /* Pour que les images occupent tout l'espace tout en gardant leur ratio */
+}
+
+.image-card:hover {
+  transform: scale(1.05);
 }
 
 h1 {
@@ -40,26 +40,22 @@ h1 {
   font-weight: 700;
   text-align: center;
   color: #d4af37;
-  margin-bottom: 1rem;
+  margin: 1rem 0; /* Réduction des marges haut/bas */
 }
 
 /* Ajout de styles pour les écrans plus petits */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2rem; /* Réduction de la taille du titre */
-  }
-
-  .image-card {
-    max-width: 90%; /* Augmentation de la largeur maximale pour les écrans moyens */
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.5rem; /* Réduction supplémentaire de la taille du titre */
+    font-size: 1.5rem;
   }
 
   .image-card {
-    max-width: 95%; /* Largeur maximale encore augmentée pour les petits écrans */
+    max-width: 100%;
   }
 }
