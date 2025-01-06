@@ -49,6 +49,7 @@ import { delay } from 'rxjs/operators';
       display: flex;
       gap: 1rem;
     }
+
     @keyframes blinkCursor {
       50% {
         border-right-color: transparent;
@@ -56,16 +57,13 @@ import { delay } from 'rxjs/operators';
     }
 
     @keyframes typeAndDelete {
-      0%,
-      10% {
+      0%, 10% {
         width: 0;
       }
-      45%,
-      55% {
+      45%, 55% {
         width: 6.2em;
-      } /* adjust width based on content */
-      90%,
-      100% {
+      }
+      90%, 100% {
         width: 0;
       }
     }
@@ -77,7 +75,7 @@ import { delay } from 'rxjs/operators';
       font-family: "Courier New", Courier, monospace;
       font-size: 2.5em;
       padding: 2.5em 1.5em;
-      width: 24em;
+      width: 20em;
       margin: 250px auto;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
@@ -91,7 +89,7 @@ import { delay } from 'rxjs/operators';
       top: 0;
       left: 0;
       right: 0;
-      height: 1.5em;
+      height: 1.3em;
       background-color: #333;
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
@@ -139,6 +137,35 @@ import { delay } from 'rxjs/operators';
       blinkCursor 0.5s step-end infinite alternate;
       margin-top: 1.5em;
     }
+
+    @media (max-width: 600px) {
+      .terminal-loader {
+        font-size: 1.2em;
+        padding: 1em;
+        width: 12em;
+        margin: 50% auto;
+      }
+
+      .terminal-header {
+        height: 1em;
+        padding: 0 0.3em;
+      }
+
+      .control {
+        width: 0.5em;
+        height: 0.5em;
+        margin-left: 0.3em;
+      }
+
+      .terminal-title {
+        font-size: 0.8em;
+      }
+
+      .text {
+        margin-top: 0.5em;
+        animation: typeAndDelete 6s steps(11) infinite, blinkCursor 0.7s step-end infinite alternate;
+      }
+    }
   `]
 })
 export class SlideLayoutComponent {
@@ -160,7 +187,7 @@ export class SlideLayoutComponent {
       } else if (event instanceof NavigationEnd) {
         setTimeout(() => {
           this.isLoading = false;
-        }, 4000); // petti délai pour augmenter le temps d'affichage du loader
+        }, 4000); // petit délai pour augmenter le temps d'affichage du loader
       }
     });
   }
