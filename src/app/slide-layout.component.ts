@@ -145,11 +145,11 @@ export class SlideLayoutComponent {
   isLoading = false;
   slides = [
     '',
-    'tech-stack',
     'app-mission',
     'about-rolex',
-    'app-expectations',
+    'tech-stack',
     'app-mes-travaux',
+    'app-expectations',
     'app-conclusion'
   ];
 
