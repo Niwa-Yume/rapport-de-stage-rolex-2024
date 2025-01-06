@@ -12,10 +12,10 @@ import { CommonModule } from '@angular/common';
       <div class="content-container">
         <h1 class="title">Stage en développement web chez Rolex</h1>
         <p class="subtitle">Allier innovation digitale et expérience horlogère</p>
-        
+
         <div class="quote-container">
           <div class="quote">
-            <img src="rolex batiment.jpg" alt="batiment" class="responsive-image" style="max-height: 55vh;">
+            <img src="https://logowik.com/content/uploads/images/275_rolex.jpg" alt="Logo Rolex" class="intro-image" style="width: 50vh" />
           </div>
         </div>
       </div>
@@ -148,11 +148,11 @@ import { CommonModule } from '@angular/common';
       .title {
         font-size: 1.8rem;
       }
-      
+
       .subtitle {
         font-size: 0.9rem;
       }
-      
+
       .quote {
         font-size: 0.9rem;
       }
@@ -173,11 +173,11 @@ import { CommonModule } from '@angular/common';
       .title {
         font-size: 1.5rem;
       }
-      
+
       .subtitle {
         font-size: 0.8rem;
       }
-      
+
       .quote {
         font-size: 0.9rem;
       }
