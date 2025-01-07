@@ -17,20 +17,32 @@ import { CommonModule } from '@angular/common';
         <button (click)="nextSlide()" [disabled]="nextDisabled">Suivant</button>
       </nav>
 
+      <div *ngIf="isLoading" class="terminal-loader">
+        <div class="terminal-header">
+          <div class="terminal-title">Status</div>
+          <div class="terminal-controls">
+            <div class="control close"></div>
+            <div class="control minimize"></div>
+            <div class="control maximize"></div>
+          </div>
+        </div>
+        <div class="text">Loading...</div>
+      </div>
 
       <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
       <label for="menu-icon"></label>
       <nav class="nav">
-        <ul class="pt-5 text-white ">
-          <li><a routerLink="/" routerLinkActive>Accueil</a></li>
-          <li><a routerLink="/about-rolex" routerLinkActive>A propos de Rolex</a></li>
-          <li><a routerLink="/app-mission" routerLinkActive>Ma mission</a></li>
-          <li><a routerLink="/tech-stack" routerLinkActive>Tech stack</a></li>
-          <li><a routerLink="/app-mes-travaux" routerLinkActive>Mes travaux</a></li>
-          <li><a routerLink="/app-expectations" routerLinkActive>Attente et Réalité</a></li>
-          <li><a routerLink="/app-conclusion" routerLinkActive>Conclusion</a></li>
+        <ul class="pt-5 text-white">
+          <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Accueil</a></li>
+          <li><a routerLink="/about-rolex" routerLinkActive="active" (click)="closeMenu()">A propos de Rolex</a></li>
+          <li><a routerLink="/app-mission" routerLinkActive="active" (click)="closeMenu()">Ma mission</a></li>
+          <li><a routerLink="/tech-stack" routerLinkActive="active" (click)="closeMenu()">Tech stack</a></li>
+          <li><a routerLink="/app-mes-travaux" routerLinkActive="active" (click)="closeMenu()">Mes travaux</a></li>
+          <li><a routerLink="/app-expectations" routerLinkActive="active" (click)="closeMenu()">Attente et Réalité</a></li>
+          <li><a routerLink="/app-conclusion" routerLinkActive="active" (click)="closeMenu()">Conclusion</a></li>
         </ul>
       </nav>
+    </div>
   `,
   styles: [`
     .slide-container {
@@ -39,9 +51,11 @@ import { CommonModule } from '@angular/common';
       flex-direction: column;
       position: relative;
     }
+
     .slide-content {
       flex: 1;
     }
+
     .nav-buttons {
       position: fixed;
       bottom: 2rem;
@@ -51,28 +65,122 @@ import { CommonModule } from '@angular/common';
       gap: 1rem;
     }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 300;
-      font-size: 15px;
-      line-height: 1.7;
-      color: #ececee;
-      background-color: #1f2029;
-      overflow: hidden;
-      background-position: center;
-      background-repeat: repeat;
-      background-size: 4%;
-      height: 100vh;
-      width: 100%;
+    @keyframes blinkCursor {
+      50% {
+        border-right-color: transparent;
+      }
     }
 
+    @keyframes typeAndDelete {
+      0%, 10% {
+        width: 0;
+      }
+      45%, 55% {
+        width: 6.2em;
+      }
+      90%, 100% {
+        width: 0;
+      }
+    }
+
+    .terminal-loader {
+      border: 0.1em solid #333;
+      background-color: #1a1a1a;
+      color: #0f0;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 2.5em;
+      padding: 2.5em 1.5em;
+      width: 20em;
+      margin: 250px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .terminal-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1.3em;
+      background-color: #333;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      padding: 0 0.4em;
+      box-sizing: border-box;
+    }
+
+    .terminal-controls {
+      float: right;
+    }
+
+    .control {
+      display: inline-block;
+      width: 0.6em;
+      height: 0.6em;
+      margin-left: 0.4em;
+      border-radius: 50%;
+      background-color: #777;
+    }
+
+    .control.close {
+      background-color: #e33;
+    }
+
+    .control.minimize {
+      background-color: #ee0;
+    }
+
+    .control.maximize {
+      background-color: #0b0;
+    }
+
+    .terminal-title {
+      float: left;
+      line-height: 1.5em;
+      color: #eee;
+    }
+
+    .text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 0.2em solid green;
+      animation: typeAndDelete 6s steps(11) infinite, blinkCursor 0.7s step-end infinite alternate;
+      margin-top: 0.5em;
+    }
+
+    @media (max-width: 600px) {
+      .terminal-loader {
+        font-size: 1.2em;
+        padding: 1em;
+        width: 12em;
+        margin: 50% auto;
+      }
+
+      .terminal-header {
+        height: 1em;
+        padding: 0 0.3em;
+      }
+
+      .control {
+        width: 0.5em;
+        height: 0.5em;
+        margin-left: 0.3em;
+      }
+
+      .terminal-title {
+        font-size: 0.8em;
+      }
+    }
 
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
       font-size: 7vw;
       line-height: 1;
-      color: #ffeba7;
       text-align: center;
       -webkit-text-stroke: 2px #ffeba7;
       text-stroke: 2px #ffeba7;
@@ -278,7 +386,6 @@ import { CommonModule } from '@angular/common';
       transition-delay: 150ms;
     }
 
-
     .nav ul li a {
       font-family: 'Montserrat', sans-serif;
       font-size: 9vh;
@@ -313,14 +420,12 @@ import { CommonModule } from '@angular/common';
       width: 100%;
     }
 
-
     .menu-icon:checked ~ .nav ul li {
       pointer-events: auto;
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
-      transition: opacity 350ms ease,
-      transform 250ms ease;
+      transition: opacity 350ms ease, transform 250ms ease;
     }
 
     .menu-icon:checked ~ .nav ul li:nth-child(1) {
@@ -351,31 +456,16 @@ import { CommonModule } from '@angular/common';
       transition-delay: 1880ms;
     }
 
-
-    .logo {
-      position: absolute;
-      top: 60px;
-      left: 50px;
-      display: block;
-      z-index: 11;
-      transition: all 250ms linear;
-    }
-
     .logo img {
       height: 26px;
       width: auto;
       display: block;
     }
 
-
     @media screen and (max-width: 991px) {
       .menu-icon:checked + label,
       .menu-icon:not(:checked) + label {
         right: 55px;
-      }
-
-      .logo {
-        left: 30px;
       }
 
       .nav {
@@ -403,19 +493,13 @@ export class SlideLayoutComponent implements OnInit {
   nextDisabled = false;
   slides = [
     '',
-    'app-mission',
     'about-rolex',
+    'app-mission',
     'tech-stack',
     'app-mes-travaux',
     'app-expectations',
     'app-conclusion'
   ];
-
-  // Defining the initial position for the menu with optional properties
-  menuStyle: { top: string; left?: string; right?: string } = {
-    top: '1rem',
-    left: '1rem',
-  };
 
   constructor(private router: Router) {
     this.router.events.subscribe((event: Event) => {
@@ -424,14 +508,14 @@ export class SlideLayoutComponent implements OnInit {
       } else if (event instanceof NavigationEnd) {
         setTimeout(() => {
           this.isLoading = false;
-        }, 4000); // petit délai pour augmenter le temps d'affichage du loader
+        }, 4000); // small delay to simulate loading duration
         this.updateButtonState();
       }
     });
   }
 
   ngOnInit() {
-    this.setMenuPosition('left', '5rem');
+    this.updateButtonState();
   }
 
   getCurrentSlideIndex(): number {
@@ -459,18 +543,10 @@ export class SlideLayoutComponent implements OnInit {
     }
   }
 
-  // Methods for dynamically adjusting the menu position
-  setMenuPosition(position: 'left' | 'right', margin: string) {
-    if (position === 'left') {
-      this.menuStyle = {
-        top: '1rem',
-        left: margin
-      };
-    } else if (position === 'right') {
-      this.menuStyle = {
-        top: '1rem',
-        right: margin
-      };
+  closeMenu() {
+    const menuIcon: HTMLElement | null = document.getElementById('menu-icon');
+    if (menuIcon) {
+      (menuIcon as HTMLInputElement).checked = false;
     }
   }
 }
