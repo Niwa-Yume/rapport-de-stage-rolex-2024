@@ -59,7 +59,6 @@ import { CommonModule } from '@angular/common';
       color: #ececee;
       background-color: #1f2029;
       overflow: hidden;
-      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
       background-position: center;
       background-repeat: repeat;
       background-size: 4%;
@@ -175,7 +174,7 @@ import { CommonModule } from '@angular/common';
       z-index: 9;
       overflow: hidden;
       box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
-      background-color: #353746;
+      background-color: var(--rolex-green);
       animation: border-transform 7s linear infinite;
       transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
       right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
@@ -306,7 +305,6 @@ import { CommonModule } from '@angular/common';
       margin-top: -1vh;
       width: 0;
       left: 0;
-      background-color: #353746;
       opacity: 0.8;
       transition: width 250ms linear;
     }
