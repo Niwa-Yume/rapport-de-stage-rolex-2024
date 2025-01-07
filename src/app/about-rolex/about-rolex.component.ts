@@ -24,13 +24,16 @@ export class AboutRolexComponent implements OnInit{
   ngOnInit() {
     console.log('Timeline events:', this.timelineEvents);
   }
-  
+
   readonly timelineEvents = [
-    { year: 1905, event: 'Fondation de Rolex par Hans Wilsdorf' },
-    { year: 1915, event: 'Brevet du système de remontage automatique' },
-    { year: 1985, event: 'Utilisation pionnière du saphir synthétique' },
-    { year: 2012, event: 'Lancement du système Syloxi en silicium' },
-    { year: 2020, event: 'Nouveaux processus de production automatisés' }
+    { year: 1908, event: 'Fondation de Rolex par Hans Wilsdorf à Genève' },
+    { year: 1919, event: 'Rolex déménage à Genève' },
+    { year: 1945, event: 'la première montre‑bracelet chronomètre à remontage automatique à afficher la date dans un guichet' },
+    { year: 1953, event: 'la Submariner est la première montre de plongée étanche jusqu’à 100 mètres' },
+    { year: 1963, event: 'Le Cosmograph Daytona, l’instrument ultime pour tout pilote de course' },
+    { year: 1967, event: 'L’année 1967 voit le lancement de la Sea‑Dweller, étanche jusqu’à 610 mètres' },
+    { year: 2015, event: 'Toutes les montres Rolex ont reçu la certification Chronomètre Superlatif, redéfinie par Rolex en 2015' },
+
  ];
   activeSection = '';
 
