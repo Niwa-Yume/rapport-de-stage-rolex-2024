@@ -34,6 +34,7 @@ import { CommonModule } from '@angular/common';
       <nav class="nav">
         <ul class="pt-5 text-white">
           <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Accueil</a></li>
+          <li><a routerLink="/app-toc" routerLinkActive="active" (click)="closeMenu()">Table des matières</a></li>
           <li><a routerLink="/about-rolex" routerLinkActive="active" (click)="closeMenu()">A propos de Rolex</a></li>
           <li><a routerLink="/app-mission" routerLinkActive="active" (click)="closeMenu()">Ma mission</a></li>
           <li><a routerLink="/tech-stack" routerLinkActive="active" (click)="closeMenu()">Tech stack</a></li>
@@ -494,6 +495,7 @@ export class SlideLayoutComponent implements OnInit {
   slides = [
     '',
     'about-rolex',
+    'app-toc',
     'app-mission',
     'tech-stack',
     'app-mes-travaux',

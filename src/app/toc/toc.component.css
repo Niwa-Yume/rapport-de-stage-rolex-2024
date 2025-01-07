@@ -1,0 +1,93 @@
+.toc-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(0, 58, 70, 0.9), rgba(0, 138, 92, 0.9));
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow-y: auto;
+}
+
+
+.toc-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffeba7;
+  text-align: center;
+}
+
+/* List styling */
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+
+.toc-list li {
+  margin: 1rem 0;
+}
+
+.toc-list li a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #ececee;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.toc-list li a i {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+
+.toc-list li a {
+  color: #ffeba7;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .toc-container h2 {
+    font-size: 2rem;
+  }
+
+  .toc-list li a {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .toc-list li a i {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toc-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .toc-list li a {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .toc-list li a i {
+    font-size: 1rem;
+  }
+}

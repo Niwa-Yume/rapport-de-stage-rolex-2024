@@ -5,9 +5,10 @@ import { MissionComponent } from './mission/mission.component';
 import { SlideLayoutComponent } from './slide-layout.component';
 import { HomeSlideComponent } from './home-slide.component';
 import { AboutRolexComponent } from './about-rolex/about-rolex.component';
-import { ExpectationsComponent } from './expectations/expectations.component'; 
+import { ExpectationsComponent } from './expectations/expectations.component';
 import { MesTravauxComponent } from './mes-travaux/mes-travaux.component';
 import { ConclusionComponent } from './conclusion/conclusion.component';
+import {TocComponent} from './toc/toc.component';
 
 export const routes: Routes = [
   {
@@ -16,7 +17,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeSlideComponent  
+        component: HomeSlideComponent
       },
       {
         path: 'app-mission',
@@ -41,7 +42,10 @@ export const routes: Routes = [
       {
         path: 'app-conclusion',
         component: ConclusionComponent
-      }
+      },{
+        path: 'app-toc',
+        component: TocComponent
+      },
     ]
   }
 ];

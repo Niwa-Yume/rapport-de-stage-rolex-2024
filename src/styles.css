@@ -2,20 +2,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 :root {
     /* Couleurs principales de Rolex */
     --rolex-green: #006039;
     --rolex-gold: #a37e2c;
     --rolex-white: #ffffff;
     --rolex-black: #212121;
-  
+
     /* Couleurs des éléments spécifiques */
     --bg-color: #006039;
     --title-color: var(--rolex-gold);
     --subtitle-color: var(--rolex-white);
     --button-color: var(--rolex-white);
     --dot-color: var(--rolex-white);
-  
+
     /* Couleurs des composants */
     --progress-bg: var(--rolex-white);
     --testimonial-bg: rgba(255, 255, 255, 0.1);  /* Fond semi-transparent */
@@ -28,7 +29,7 @@
     background-color: var(--rolex-green);
     font-family: 'Helvetica Neue', Arial, sans-serif;
   }
-  
+
 .title {
   color: var(--rolex-white);
   font-size: 3.5rem;
