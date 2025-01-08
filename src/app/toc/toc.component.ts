@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-toc',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './toc.component.html',
   styleUrls: ['./toc.component.css']
 })

@@ -1,10 +1,6 @@
-:host {
-  display: block;
-}
-
 .hero {
-  animation: fadeIn 1s ease-in-out;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  height: 100vh;
 }
 
 .accent-decorator {
@@ -15,6 +11,7 @@
   height: 8rem;
   border-bottom-left-radius: 100%;
   z-index: -1;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.1) 0%, rgba(202, 138, 4, 0.1) 100%);
 }
 
 .content-container {
@@ -24,20 +21,15 @@
   transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-.motion-safe:animate-bounce {
-  animation: bounce 2s infinite;
-}
-
-.motion-safe:animate-fadeIn {
-  animation: fadeIn 1.5s ease-in-out;
-}
-.logo{
+.logo {
   width: 150px;
 }
+
 .separator {
   width: 4rem;
   height: 0.25rem;
   border-radius: 9999px;
+  background-color: #ffc107;
 }
 
 .subtitle {
@@ -51,6 +43,7 @@
 .image-wrapper {
   position: relative;
   margin-top: 3rem;
+  cursor: pointer;
 }
 
 .image-container {
@@ -72,26 +65,31 @@
   transform: scale(1.05);
 }
 
-.decorator-bottom-left {
+.full-image {
+  width: 100%;
+  height: auto;
+}
+
+.decorator-bottom-left,
+.decorator-top-right {
   position: absolute;
-  bottom: -1rem;
-  left: -1rem;
-  width: 6rem;
-  height: 6rem;
-  background: linear-gradient(135deg, rgba(250, 204, 21, 0.1) 0%, rgba(202, 138, 4, 0.1) 100%);
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.1) 0%, rgba(202, 138, 4, 0.1) 100%);
   border-radius: 9999px;
   z-index: -1;
 }
 
+.decorator-bottom-left {
+  bottom: -1rem;
+  left: -1rem;
+  width: 6rem;
+  height: 6rem;
+}
+
 .decorator-top-right {
-  position: absolute;
   top: -1rem;
   right: -1rem;
   width: 4rem;
   height: 4rem;
-  background: linear-gradient(315deg, rgba(250, 204, 21, 0.1) 0%, rgba(202, 138, 4, 0.1) 100%);
-  border-radius: 9999px;
-  z-index: -1;
 }
 
 @media (max-width: 768px) {
@@ -121,48 +119,5 @@
     object-fit: cover;
   }
 
-  .additional-info {
-    padding: 0 1rem;
-  }
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-}

@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
         <button (click)="nextSlide()" [disabled]="nextDisabled">Suivant</button>
       </nav>
 
-      <div *ngIf="isLoading" class="terminal-loader">
+      <div *ngIf="isLoading" class="terminal-loader ">
         <div class="terminal-header">
           <div class="terminal-title">Status</div>
           <div class="terminal-controls">
@@ -32,10 +32,10 @@ import { CommonModule } from '@angular/common';
       <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
       <label for="menu-icon"></label>
       <nav class="nav">
-        <ul class="pt-5 text-white">
+        <ul class="pt-5 text-white taille-menu">
           <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Accueil</a></li>
           <li><a routerLink="/app-toc" routerLinkActive="active" (click)="closeMenu()">Table des matières</a></li>
-          <li><a routerLink="/about-rolex" routerLinkActive="active" (click)="closeMenu()">A propos de Rolex</a></li>
+          <li><a routerLink="/about-rolex" routerLinkActive="active" (click)="closeMenu()">À propos de Rolex</a></li>
           <li><a routerLink="/app-mission" routerLinkActive="active" (click)="closeMenu()">Ma mission</a></li>
           <li><a routerLink="/tech-stack" routerLinkActive="active" (click)="closeMenu()">Tech stack</a></li>
           <li><a routerLink="/app-mes-travaux" routerLinkActive="active" (click)="closeMenu()">Mes travaux</a></li>
@@ -144,14 +144,7 @@ import { CommonModule } from '@angular/common';
       color: #eee;
     }
 
-    .text {
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 0.2em solid green;
-      animation: typeAndDelete 6s steps(11) infinite, blinkCursor 0.7s step-end infinite alternate;
-      margin-top: 0.5em;
-    }
+
 
     @media (max-width: 600px) {
       .terminal-loader {
@@ -389,7 +382,7 @@ import { CommonModule } from '@angular/common';
 
     .nav ul li a {
       font-family: 'Montserrat', sans-serif;
-      font-size: 9vh;
+      font-size: 5vh;
       text-transform: uppercase;
       line-height: 1.2;
       font-weight: 800;

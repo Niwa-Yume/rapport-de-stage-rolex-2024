@@ -35,34 +35,6 @@ import { CommonModule } from '@angular/common';
       align-items: center;
     }
 
-    .image-wrapper {
-      position: relative;
-      width: 70%;
-      height: 80%; /* Permet à l'image de s'ajuster */
-      z-index: 1; /* S'assure que l'image est en dessous du contenu */
-    }
-
-    .hero-image {
-      width: 100%;
-      height: 80%;
-      max-height: 50vh;
-      object-fit: cover;
-      object-position: center;
-      transform: scale(1.1);
-      transition: transform 8s ease;
-      will-change: transform;
-    }
-
-    .hero-container:hover .hero-image {
-      transform: scale(1.2);
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
 
     .content-container {
       position: relative;
@@ -77,13 +49,7 @@ import { CommonModule } from '@angular/common';
       margin-top: 20px;
     }
 
-    .title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
+
 
     .subtitle {
       font-size: 1.5rem;
@@ -105,43 +71,6 @@ import { CommonModule } from '@angular/common';
       font-style: italic;
       line-height: 1.6;
       position: relative;
-    }
-
-    .quote-mark {
-      color: #d4af37;
-      font-size: 2rem;
-      font-family: serif;
-    }
-
-    .responsive-image {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .button-container {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 3;
-      display: flex;
-      gap: 1rem;
-    }
-
-    .btn {
-      background-color: #d4af37;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #b89a2a;
     }
 
     @media (max-width: 768px) {

@@ -1,38 +1,82 @@
 :host {
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   color: #fff;
-  padding: 1rem;
+  padding: 0;
+  margin: 0;
   font-family: 'Arial', sans-serif;
-  overflow: hidden;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: auto;
 }
 
+.hover-text {
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-text::before {
+  content: attr(data-text); /* Utilisez le contenu du paragraphe */
+  position: absolute;
+  bottom: 100%; /* Position au-dessus du texte */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.75); /* Fond sombre pour le contraste */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: pre-wrap; /* Conserve les sauts de ligne */
+  font-size: 1.2rem; /* Texte plus grand */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 10; /* Assure qu'il apparaît au-dessus des autres éléments */
+  pointer-events: none; /* Permet de cliquer à travers la bulle */
+  max-width: 80%; /* Conserve une largeur maximale pour ne pas dépasser l'écran */
+  animation: fadeInBubble 0.15s ease-in-out;
+}
+
+.hover-text:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-10px); /* Un petit déplacement pour l'effet */
+}
+
+/* Définition de l'animation */
+@keyframes fadeInBubble {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
 .expectations-container, .reality-card {
   border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  flex: 1 1 45%;
   padding: 2rem;
+  flex: 2; /* Plus grand pour une carte plus large */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
-  min-width: 300px;
-  max-width: 600px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  height: 80%;
+  max-width: 100%; /* Ajustez pour rendre les cartes plus larges */
+  box-sizing: border-box;
   text-align: center;
-}
-
-.expectations-container:hover, .reality-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 h1 {
@@ -50,10 +94,6 @@ h2 {
   border-bottom: 2px solid rgba(212, 175, 55, 0.5);
   padding-bottom: 0.5rem;
   transition: transform 0.3s;
-}
-
-h2:hover {
-  transform: translateY(-5px);
 }
 
 p, li {
@@ -94,7 +134,6 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 200px;
-  margin: 0.5rem auto;
 }
 
 button:hover {
@@ -103,10 +142,6 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  .expectations-container, .reality-card {
-    flex: 1 1 90%;
-  }
-
   h1 {
     font-size: 2rem;
   }
@@ -122,7 +157,7 @@ button:hover {
 
 @media (max-width: 480px) {
   .expectations-container, .reality-card {
-    flex: 1 1 100%;
+    padding: 1rem;
   }
 
   h1 {
@@ -135,9 +170,5 @@ button:hover {
 
   p, li {
     font-size: 0.8rem;
-  }
-
-  .reality-card {
-    padding: 1rem;
   }
 }
