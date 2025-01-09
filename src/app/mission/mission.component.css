@@ -63,7 +63,6 @@
   transform: scale(1.05);
 }
 
-
 .decorator-bottom-left,
 .decorator-top-right {
   position: absolute;
@@ -78,11 +77,9 @@
   width: 6rem;
   height: 6rem;
 }
-.bg{
+
+.bg {
   background: var(--rolex-green);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .decorator-top-right {
@@ -92,7 +89,7 @@
   height: 4rem;
 }
 
-button {
+.button {
   padding: 1rem 2rem;
   border: none;
   color: white;
@@ -103,7 +100,7 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Styles responsifs pour les petits écrans */
 @media (max-width: 768px) {
   .content-container {
     padding: 1rem;
@@ -130,6 +127,4 @@ button {
   .mission-image {
     object-fit: cover;
   }
-
 }
-

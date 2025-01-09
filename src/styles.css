@@ -43,10 +43,10 @@
 
 .subtitle {
   color: var(--rolex-gold);
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 20px;
   letter-spacing: 1px;
   text-align: center;
+  font-weight: bold;
 }
 * {
   margin: 0;
