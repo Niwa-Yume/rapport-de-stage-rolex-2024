@@ -28,8 +28,12 @@
           </div>
 
           <button (click)="openDialog()">Afficher l'illustration</button>
-          <p-dialog header="Mission illustration" [(visible)]="showDialog" [modal]="true" [closable]="true" [style]="{ width: '75vw' }">
-            <img src="scroll-quest.png" alt="Mission illustration" class="full-image">
+          <p-dialog header="Mission illustration" [(visible)]="showDialog" [modal]="true" [closable]="true">
+            <p-table>
+              <section>
+                
+              </section>
+            </p-table>
           </p-dialog>
 
           <div class="decorator-bottom-left"></div>

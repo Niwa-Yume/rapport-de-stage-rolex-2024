@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
         <button (click)="nextSlide()" [disabled]="nextDisabled">Suivant</button>
       </nav>
 
-      <div *ngIf="isLoading" class="terminal-loader ">
+      <div *ngIf="isLoading" class="terminal-loader">
         <div class="terminal-header">
           <div class="terminal-title">Status</div>
           <div class="terminal-controls">

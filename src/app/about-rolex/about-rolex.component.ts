@@ -1,6 +1,5 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-about-rolex',
@@ -9,16 +8,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   templateUrl: './about-rolex.component.html',
   styleUrls: ['./about-rolex.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger('fadeInUp', [
-      state('void', style({ opacity: 0, transform: 'translateY(20px)' })),
-      transition(':enter', animate('600ms ease-out'))
-    ]),
-    trigger('slideSection', [
-      state('void', style({ opacity: 0, transform: 'translateX(-100px)' })),
-      transition(':enter', animate('500ms 300ms ease-out'))
-    ])
-  ]
 })
 export class AboutRolexComponent implements OnInit{
   ngOnInit() {
