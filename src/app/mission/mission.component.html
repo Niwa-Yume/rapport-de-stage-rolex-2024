@@ -1,3 +1,10 @@
+<!-- Bouton en haut à gauche -->
+<button data-modal-target="default-modal" data-modal-toggle="default-modal"
+        class="fixed top-5 left-5 text-white bg-rolex-gold rounded-lg text-sm px-5 py-2.5 text-center"
+        type="button">
+  Afficher le sujet de la mission
+</button>
+
 <div class="hero gradient-bg">
   <div class="container mx-auto md:px-8">
     <div class="relative py-12 md:py-16 max-w-4xl mx-auto rounded-2xl shadow-xl">
@@ -9,12 +16,14 @@
         </h1>
 
         <div class="logos flex justify-center items-center gap-8 mb-8">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png" alt="AngularJS Logo" class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png"
+               alt="AngularJS Logo" class="logo">
           <span class="transform-arrow text-2xl font-bold text-yellow-600">&#8594;</span>
-          <img src="https://houseofangular.io/wp-content/uploads/2023/11/AngularLogoGradient-983x1024.png" alt="Angular 18 Logo" class="logo">
+          <img src="https://houseofangular.io/wp-content/uploads/2023/11/AngularLogoGradient-983x1024.png"
+               alt="Angular 18 Logo" class="logo">
         </div>
 
-        <div class="separator mb-8 mx-auto "></div>
+        <div class="separator mb-8 mx-auto"></div>
 
         <p class="subtitle mb-8 mx-auto">
           Ma mission chez Rolex consistait à effectuer la migration d'une application
@@ -22,40 +31,91 @@
           aux besoins métiers et en maintenant la stabilité de l'application.
         </p>
 
-        <div class="image-wrapper  mb-8">
+        <div class="image-wrapper mb-8">
           <div class="image-container rounded-lg">
             <img src="scroll-quest.png" alt="Mission illustration" class="mission-image">
           </div>
 
-          <button (click)="openDialog()">Afficher l'illustration</button>
-          <p-dialog header="Mission illustration" [(visible)]="showDialog" [modal]="true" [closable]="true">
-            <p-table>
-              <section>
-                <div class="flex flex-wrap gap-8 mt-8">
-                  <div class="border border-white-100 rounded-lg p-6 shadow-lg flex-1 transform  backdrop-filter backdrop-blur-sm">
-                    <h1 class="subtitle mb-4">Les classifications et classes</h1>
-                    <ul class="font-bold dark:text-gray-200 list-disc pl-6">
-                      <li class="mb-2">Classification de Nice</li>
-                      <li class="mb-2">Classification national</li>
-                      <li class="mb-2">Classe de produit</li>
-                      <li>Classe de services</li>
-                    </ul>
-                  </div>
-
-                  <div class="border border-white-100 rounded-lg p-6 shadow-lg flex-1 transform  backdrop-filter backdrop-blur-sm">
-                    <h1 class="subtitle mb-4">Les compétences techniques et sociales</h1>
-                    <ul class="font-bold dark:text-gray-200 list-disc pl-6">
-                      <li class="mb-2">API REST</li>
-                      <li class="mb-2">Test Unitaires</li>
-                      <li class="mb-2">Asynchrones</li>
-                      <li class="mb-2">Méthodologies Agiles</li>
-                      <li>Création de Endpoint en Java</li>
-                    </ul>
-                  </div>
+          <!-- Main modal -->
+          <div id="default-modal" tabindex="-1" aria-hidden="true"
+               class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full max-w-2xl max-h-full">
+              <!-- Modal content -->
+              <div class="relative bg rounded-lg shadow glass-effect">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t text-white">
+                  <h3 class="text-xl font-semibold ">
+                    Sujet de la mission : La propriété intellectuelle
+                  </h3>
+                  <button type="button"
+                          class="bg-transparent hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                          data-modal-hide="default-modal">
+                    <svg class="w-3 h-3" aria-hidden="true"
+                         xmlns="http://www.w3.org/2000/svg" fill="none"
+                         viewBox="0 0 14 14">
+                      <path stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="text-white">Fermer</span>
+                  </button>
                 </div>
-              </section>
-            </p-table>
-          </p-dialog>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                  <p class="text-white leading-relaxed">
+                    Pendant mon stage chez Rolex, j'ai travaillé sur la migration d'une application de gestion de propriété
+                    intellectuelle. Au début, je ne connaissais pas grand-chose à ce domaine, mais j'ai beaucoup appris sur les
+                    différents aspects de la protection des droits d'une marque prestigieuse.
+                  </p>
+                  <p class="text-white leading-relaxed">
+                    Cette expérience m'a permis d'acquérir des connaissances approfondies sur les brevets, les marques déposées et
+                    la gestion et l'organisation des délais, et sur la manière dont ces éléments sont essentiels pour protéger
+                    l'innovation et la réputation de Rolex. Travailler sur un aspect aussi critique du business de Rolex a été une
+                    expérience super intéressante.
+                  </p>
+
+                  <!-- New Section Content -->
+                  <section>
+                    <div class="flex flex-wrap gap-8 mt-8 text-white">
+                      <div class="border border-white-100 rounded-lg p-6 shadow-lg flex-1 transform backdrop-filter backdrop-blur-sm">
+                        <h1 class="subtitle mb-4">Les classifications et classes</h1>
+                        <ul class="font-bold dark:text-gray-200 list-disc pl-6">
+                          <li class="mb-2">Classification de Nice</li>
+                          <li class="mb-2">Classification nationale</li>
+                          <li class="mb-2">Classe de produit</li>
+                          <li>Classe de services</li>
+                        </ul>
+                      </div>
+
+                      <div
+                        class="border border-white-100 rounded-lg p-6 shadow-lg flex-1 transform backdrop-filter backdrop-blur-sm">
+                        <h1 class="subtitle mb-4">Les compétences techniques</h1>
+                        <ul class="font-bold dark:text-gray-200 list-disc pl-6">
+                          <li class="mb-2">API REST</li>
+                          <li class="mb-2">Tests Unitaires</li>
+                          <li class="mb-2">Asynchrones</li>
+                          <li class="mb-2">Méthodologies Agiles</li>
+                          <li>Création de Endpoint en Java</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <!-- Modal footer -->
+                <div
+                  class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                  <button data-modal-hide="default-modal" type="button"
+                          class="text-white bg-rolex-green hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-rolex-gold font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                    J'accepte
+                  </button>
+                  <button data-modal-hide="default-modal" type="button"
+                          class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    Decline
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="decorator-bottom-left"></div>
           <div class="decorator-top-right"></div>

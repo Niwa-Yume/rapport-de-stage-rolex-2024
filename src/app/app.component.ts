@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {CommonModule} from '@angular/common';
+import { initFlowbite } from 'flowbite';
 
 
 @Component({
@@ -10,8 +11,11 @@ import {CommonModule} from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'Site-stage';
 
+  ngOnInit(): void {
+    initFlowbite();
+  }
 
 }
