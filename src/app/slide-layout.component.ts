@@ -177,32 +177,6 @@ import { CommonModule } from '@angular/common';
       }
     }
 
-
-
-    @media (max-width: 600px) {
-      .terminal-loader {
-        font-size: 1.2em;
-        padding: 1em;
-        width: 12em;
-        margin: 50% auto;
-      }
-
-      .terminal-header {
-        height: 1em;
-        padding: 0 0.3em;
-      }
-
-      .control {
-        width: 0.5em;
-        height: 0.5em;
-        margin-left: 0.3em;
-      }
-
-      .terminal-title {
-        font-size: 0.8em;
-      }
-    }
-
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
@@ -413,6 +387,10 @@ import { CommonModule } from '@angular/common';
       transition-delay: 150ms;
     }
 
+    .nav ul li:nth-child(8) {
+      transition-delay: 125ms;
+    }
+
     .nav ul li a {
       font-family: 'Montserrat', sans-serif;
       font-size: 5vh;
@@ -481,6 +459,10 @@ import { CommonModule } from '@angular/common';
 
     .menu-icon:checked ~ .nav ul li:nth-child(7) {
       transition-delay: 1880ms;
+    }
+
+    .menu-icon:checked ~ .nav ul li:nth-child(8) {
+      transition-delay: 1960ms;
     }
 
     .logo img {
