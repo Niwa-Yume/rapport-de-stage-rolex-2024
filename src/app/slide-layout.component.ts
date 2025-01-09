@@ -393,7 +393,7 @@ import { CommonModule } from '@angular/common';
 
     .nav ul li a {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.5vh; /* adjust font-size for inner scale */
+      font-size: 5vh; /* adjust font-size for inner scale */
       text-transform: uppercase;
       line-height: 1.2;
       font-weight: 800;
