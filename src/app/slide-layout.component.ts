@@ -144,6 +144,39 @@ import { CommonModule } from '@angular/common';
       color: #eee;
     }
 
+    .text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 0.2em solid green; /* Cursor */
+      animation: typeAndDelete 4s steps(11) infinite, blinkCursor 0.5s step-end infinite alternate;
+    }
+
+    /* Media Queries and other styles */
+    @media (max-width: 600px) {
+      .terminal-loader {
+        font-size: 1.2em;
+        padding: 1em;
+        width: 12em;
+        margin: 50% auto;
+      }
+
+      .terminal-header {
+        height: 1em;
+        padding: 0 0.3em;
+      }
+
+      .control {
+        width: 0.5em;
+        height: 0.5em;
+        margin-left: 0.3em;
+      }
+
+      .terminal-title {
+        font-size: 0.8em;
+      }
+    }
+
 
 
     @media (max-width: 600px) {
@@ -487,8 +520,8 @@ export class SlideLayoutComponent implements OnInit {
   nextDisabled = false;
   slides = [
     '',
-    'about-rolex',
     'app-toc',
+    'about-rolex',
     'app-mission',
     'tech-stack',
     'app-mes-travaux',
