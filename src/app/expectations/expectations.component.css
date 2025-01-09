@@ -7,16 +7,18 @@
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  align-items: flex-start; /* Modifié pour permettre le défilement si nécessaire */
+  overflow: auto; /* Assurez-vous que le contenu peut défiler si nécessaire */
 }
 
 .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Modifié pour aligner les éléments en haut */
   justify-content: space-between;
-  width: 100vw;
-  height: auto;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante sur les petits écrans */
+  width: 100%;
+  padding: 1rem; /* Ajoute du padding autour du contenu */
+  box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
 }
 
 .hover-text {
@@ -25,33 +27,32 @@
 }
 
 .hover-text::before {
-  content: attr(data-text); /* Utilisez le contenu du paragraphe */
+  content: attr(data-text);
   position: absolute;
-  bottom: 100%; /* Position au-dessus du texte */
+  bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.75); /* Fond sombre pour le contraste */
+  background-color: rgba(0, 0, 0, 0.75);
   color: white;
   padding: 10px;
   border-radius: 5px;
-  white-space: pre-wrap; /* Conserve les sauts de ligne */
-  font-size: 1.2rem; /* Texte plus grand */
+  white-space: pre-wrap;
+  font-size: 1.2rem;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  z-index: 10; /* Assure qu'il apparaît au-dessus des autres éléments */
-  pointer-events: none; /* Permet de cliquer à travers la bulle */
-  max-width: 80%; /* Conserve une largeur maximale pour ne pas dépasser l'écran */
+  z-index: 10;
+  pointer-events: none;
+  max-width: 80%;
   animation: fadeInBubble 0.15s ease-in-out;
 }
 
 .hover-text:hover::before {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(-10px); /* Un petit déplacement pour l'effet */
+  transform: translateX(-50%) translateY(-10px);
 }
 
-/* Définition de l'animation */
 @keyframes fadeInBubble {
   from {
     opacity: 0;
@@ -62,18 +63,18 @@
     transform: translateX(-50%) translateY(-10px);
   }
 }
+
 .expectations-container, .reality-card {
   border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   padding: 2rem;
-  flex: 2; /* Plus grand pour une carte plus large */
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1rem;
-  height: 80%;
-  max-width: 100%; /* Ajustez pour rendre les cartes plus larges */
+  max-width: 100%;
   box-sizing: border-box;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -153,11 +154,22 @@ button:hover {
   p, li {
     font-size: 0.9rem;
   }
+
+  .expectations-container, .reality-card {
+    padding: 1.5rem;
+    flex: 1 1 100%;
+  }
 }
 
 @media (max-width: 480px) {
   .expectations-container, .reality-card {
     padding: 1rem;
+  }
+
+
+  .expectations-container, .reality-card {
+    height: auto;
+    margin-top: 1rem;
   }
 
   h1 {
@@ -170,5 +182,10 @@ button:hover {
 
   p, li {
     font-size: 0.8rem;
+  }
+
+  .expectations-container, .reality-card {
+    padding: 1rem;
+    flex: 1 1 100%;
   }
 }
