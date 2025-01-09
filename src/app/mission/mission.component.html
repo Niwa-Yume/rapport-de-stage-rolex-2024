@@ -31,7 +31,28 @@
           <p-dialog header="Mission illustration" [(visible)]="showDialog" [modal]="true" [closable]="true">
             <p-table>
               <section>
-                
+                <div class="flex flex-wrap gap-8 mt-8">
+                  <div class="border border-white-100 rounded-lg p-6 shadow-lg flex-1 transform  backdrop-filter backdrop-blur-sm">
+                    <h1 class="subtitle mb-4">Les classifications et classes</h1>
+                    <ul class="font-bold dark:text-gray-200 list-disc pl-6">
+                      <li class="mb-2">Classification de Nice</li>
+                      <li class="mb-2">Classification national</li>
+                      <li class="mb-2">Classe de produit</li>
+                      <li>Classe de services</li>
+                    </ul>
+                  </div>
+
+                  <div class="border border-white-100 rounded-lg p-6 shadow-lg flex-1 transform  backdrop-filter backdrop-blur-sm">
+                    <h1 class="subtitle mb-4">Les compétences techniques et sociales</h1>
+                    <ul class="font-bold dark:text-gray-200 list-disc pl-6">
+                      <li class="mb-2">API REST</li>
+                      <li class="mb-2">Test Unitaires</li>
+                      <li class="mb-2">Asynchrones</li>
+                      <li class="mb-2">Méthodologies Agiles</li>
+                      <li>Création de Endpoint en Java</li>
+                    </ul>
+                  </div>
+                </div>
               </section>
             </p-table>
           </p-dialog>
