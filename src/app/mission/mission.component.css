@@ -102,7 +102,14 @@
 .bg-rolex-gold {
   background-color: var(--rolex-gold, #a37e2c);
 }
-
+.text-lg {
+  font-size: 1.7rem; /* Adjust as needed */
+  line-height: 1.75;
+}
+.text-p {
+  font-size: 1.5rem; /* Adjust as needed */
+  line-height: 1.75;
+}
 .button {
   padding: 1rem 2rem;
   border: none;

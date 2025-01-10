@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
   selector: 'app-mission',
   standalone: true,
@@ -13,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class MissionComponent {
   showDialog = false;
-  showSecondDialog = false;
+  showSecondDialog = false; // Property for the second modal
 
   openDialog() {
     this.showDialog = true;
@@ -22,6 +21,7 @@ export class MissionComponent {
   closeDialog() {
     this.showDialog = false;
   }
+
   openSecondDialog() {
     this.showSecondDialog = true;
   }
@@ -30,4 +30,14 @@ export class MissionComponent {
     this.showSecondDialog = false;
   }
 
+  closeBothDialogs() {
+    this.showDialog = false;
+    this.showSecondDialog = false;
+  }
+  toggleAccordion(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.classList.toggle('hidden');
+    }
+  }
 }
