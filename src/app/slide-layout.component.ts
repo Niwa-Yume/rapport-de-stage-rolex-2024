@@ -500,8 +500,8 @@ import { CommonModule } from '@angular/common';
   `]
 })
 export class SlideLayoutComponent implements OnInit {
-  isLoading = false;
-  initialLoading = true;
+  isLoading = true;
+  initialLoading = false;
   previousDisabled = true;
   nextDisabled = false;
   slides = [
@@ -514,15 +514,16 @@ export class SlideLayoutComponent implements OnInit {
     'app-conclusion'
   ];
 
+
   constructor(private router: Router) {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
         this.isLoading = true;
       } else if (event instanceof NavigationEnd) {
         setTimeout(() => {
-          this.isLoading = false;
+          this.isLoading = false;// si true = boucle infini
           this.initialLoading = false;
-        }, 2000); // petit délai pour loader
+        }, 2000); // petit delai
         this.updateButtonState();
       }
     });

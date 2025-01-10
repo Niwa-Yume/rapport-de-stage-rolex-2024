@@ -60,13 +60,51 @@ html, body {
   overflow-x: hidden;
   background-color: var(--rolex-green);
 }
+.modal-header {
+  border-bottom: 1px solid #dee2e6;
+}
 
+.modal-body {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: white; /* Ensure text color is set correctly */
+}
+
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+}
+
+.bg-rolex-gold {
+  background-color: var(--rolex-gold, #a37e2c);
+}
+.bg-rolex-green {
+  background-color: var(--rolex-green);
+}
+.margin-b{
+  margin-bottom: 3rem!important;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  background-color: var(--rolex-gold, #a37e2c);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 body {
   margin: 0;
   font-family: var(--font-family);
   line-height: 1.6;
 }
-
+.uniform-logo {
+  width: 150px; /* define width */
+  height: auto; /* maintain aspect ratio */
+  max-height: 150px; /* to ensure the logo fits within a certain height */
+  object-fit: contain; /* preserves aspect ratio without cropping */
+}
 .nav-buttons {
   position: absolute;
   bottom: 4rem;

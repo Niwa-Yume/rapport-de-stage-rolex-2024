@@ -13,8 +13,21 @@ import { CommonModule } from '@angular/common';
 })
 export class MissionComponent {
   showDialog = false;
+  showSecondDialog = false;
 
   openDialog() {
     this.showDialog = true;
   }
+
+  closeDialog() {
+    this.showDialog = false;
+  }
+  openSecondDialog() {
+    this.showSecondDialog = true;
+  }
+
+  closeSecondDialog() {
+    this.showSecondDialog = false;
+  }
+
 }
