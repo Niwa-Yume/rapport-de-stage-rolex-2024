@@ -16,7 +16,7 @@ export class AboutRolexComponent implements OnInit{
 
   readonly timelineEvents = [
     { year: 1908, event: 'Fondation de Rolex par Hans Wilsdorf à Genève, initialement, la société est basée à Londres, Royaume-Uni.' },
-    { year: 1919, event: 'Rolex déménage à Genève' },
+    { year: 1919, event: 'En 1919, suite à la Première Guerre mondiale, Hans Wilsdorf prend la décision stratégique de déplacer le siège de Rolex de Londres à Genève, en Suisse.' },
     { year: 1945, event: 'la première montre‑bracelet chronomètre à remontage automatique à afficher la date dans un guichet' },
     { year: 1953, event: 'la Submariner est la première montre de plongée étanche jusqu’à 100 mètres' },
     { year: 1963, event: 'Le Cosmograph Daytona, l’instrument ultime pour tout pilote de course' },

@@ -521,15 +521,15 @@ export class SlideLayoutComponent implements OnInit {
       } else if (event instanceof NavigationEnd) {
         setTimeout(() => {
           this.isLoading = false;
-          this.initialLoading = false; // disable initial loader after the first navigation ends
-        }, 2000); // small delay to simulate loading duration
+          this.initialLoading = false;
+        }, 2000); // petit délai pour loader
         this.updateButtonState();
       }
     });
   }
 
   ngOnInit() {
-    this.initialLoading = true; // show loader on initial load
+    this.initialLoading = true;
     this.updateButtonState();
   }
 
