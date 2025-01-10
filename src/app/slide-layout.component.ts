@@ -11,12 +11,13 @@ import { CommonModule } from '@angular/common';
       <div class="slide-content" *ngIf="!isLoading">
         <router-outlet></router-outlet>
       </div>
-
+      <!-- BOUTON DE NAVIGATION --->
       <nav class="nav-buttons">
         <button (click)="previousSlide()" [disabled]="previousDisabled">Précédent</button>
         <button (click)="nextSlide()" [disabled]="nextDisabled">Suivant</button>
       </nav>
 
+      <!-- LOADER --->
       <div *ngIf="isLoading" class="terminal-loader">
         <div class="terminal-header">
           <div class="terminal-title">Status</div>
@@ -29,6 +30,8 @@ import { CommonModule } from '@angular/common';
         <div class="text">Loading...</div>
       </div>
 
+
+      <!-- MENU DE NAVIGATION --->
       <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
       <label for="menu-icon"></label>
       <nav class="nav">
@@ -498,11 +501,11 @@ import { CommonModule } from '@angular/common';
 })
 export class SlideLayoutComponent implements OnInit {
   isLoading = false;
+  initialLoading = true;
   previousDisabled = true;
   nextDisabled = false;
   slides = [
     '',
-    'app-toc',
     'about-rolex',
     'app-mission',
     'tech-stack',
@@ -518,13 +521,15 @@ export class SlideLayoutComponent implements OnInit {
       } else if (event instanceof NavigationEnd) {
         setTimeout(() => {
           this.isLoading = false;
-        }, 4000); // small delay to simulate loading duration
+          this.initialLoading = false; // disable initial loader after the first navigation ends
+        }, 2000); // small delay to simulate loading duration
         this.updateButtonState();
       }
     });
   }
 
   ngOnInit() {
+    this.initialLoading = true; // show loader on initial load
     this.updateButtonState();
   }
 
