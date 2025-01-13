@@ -395,6 +395,10 @@ import { CommonModule } from '@angular/common';
       transition-delay: 125ms;
     }
 
+    .nav ul li:nth-child(9) { /* Ajoutez cette section pour le 9ème élément */
+      transition-delay: 100ms;
+    }
+
     .nav ul li a {
       font-family: 'Montserrat', sans-serif;
       font-size: 5vh; /* adjust font-size for inner scale */
@@ -467,6 +471,10 @@ import { CommonModule } from '@angular/common';
 
     .menu-icon:checked ~ .nav ul li:nth-child(8) {
       transition-delay: 1960ms;
+    }
+
+    .menu-icon:checked ~ .nav ul li:nth-child(9) { /* Ajoutez cette section pour le 9ème élément */
+      transition-delay: 2040ms;
     }
 
     .logo img {
