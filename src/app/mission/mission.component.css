@@ -1,111 +1,64 @@
+/* Modal Content Styles */
 .modal-content {
   width: 90%;
-  max-height: calc(100vh - 2rem);
+  max-height: calc(100vh - 4rem);
   margin: auto;
   font-size: 1rem;
-  overflow: hidden;
-}
-/* Responsive text sizes for larger screens */
-@media (min-width: 350px) {
-  .modal-content {
-    overflow: auto;
-  }
+  overflow-y: auto; /* Allow vertical scrolling */
+  padding: 1rem;
 }
 
-  /* General Styles */
+/* General Styles */
 body {
   font-family: 'Arial', sans-serif;
 }
 
-.fixed {
-  position: fixed;
-}
-
-.inset-0 {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.z-50 {
-  z-index: 50;
-}
-
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.bg-rolex-green {
+#default-modal {
   background-color: var(--rolex-green);
 }
 
-.bg-rolex-gold {
-  background-color: var(--rolex-gold);
-}
-
-
-#secondary-modal .modal-content {
-  max-width: 10%;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-
-
-/* Responsive text sizes for larger screens */
+/* Responsive Styles */
 @media (min-width: 350px) {
-  #secondary-modal{
-    max-height: 250px;
-    margin-top: 210px;
+  .modal-content {
+    max-height: 90vh;
+    margin-top: 5vh;
   }
 
-  #secondary-modal .text-lg {
-    font-size: 1rem;
+  .subtitle {
+    font-size: 0.6rem;
+  }
+
+  .croix {
+    font-size: 1.25rem;
   }
 }
 
 @media (min-width: 768px) {
-  #secondary-modal{
-    max-height: 300px;
-    margin-top: 150px;
-  }
-  #secondary-modal .text-p {
-    font-size: 1rem;
+  .modal-content {
+    max-height: 85vh;
+    margin-top: 7.5vh;
   }
 
-  #secondary-modal .text-lg {
-    font-size: 1rem;
+  .subtitle {
+    font-size: 1.75rem;
+  }
+
+  .croix {
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  #secondary-modal{
-    max-height: 800px;
+  .modal-content {
+    max-height: 80vh;
+    margin-top: 10vh;
   }
 
-  #secondary-modal .text-p {
-    font-size: 1rem;
+  .subtitle {
+    font-size: 2rem;
   }
 
-  #secondary-modal .text-lg {
-    font-size: 1rem;
+  .croix {
+    font-size: 1.75rem;
   }
 }
-
