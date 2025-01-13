@@ -1,38 +1,34 @@
 :host {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  color: #fff;
   padding: 1rem;
   font-family: 'Arial', sans-serif;
 }
 
 .tech-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  max-width: 1200px;
+  margin: 2rem 0;
   padding: 2rem;
-  box-sizing: border-box;
   background-color: var(--rolex-green);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .tech-stack .title {
   font-size: 2rem;
-  color: var(--rolex-white);
-  text-align: center;
   margin-bottom: 2rem;
-  width: 100%;
+  color: var(--rolex-white);
 }
 
 .icons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  width: 100%;
+  gap: 2rem;
 }
 
 .icon {
@@ -42,16 +38,14 @@
 
 .card {
   background-color: var(--rolex-white);
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 2rem;
-  width: 100%;
-  max-width: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  transition: transform 0.2s;
+  gap: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
 }
 
@@ -62,9 +56,9 @@
 }
 
 .card span {
-  font-weight: 500;
-  color: var(--rolex-black);
   font-size: 1rem;
+  color: var(--rolex-black);
+  font-weight: bold;
 }
 
 .card:hover {
@@ -72,35 +66,42 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes swap {
-  0% {
-    opacity: 0;
-    transform: translateY(100%) rotateX(180deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotateX(0deg);
-  }
+.skills-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--rolex-green);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-.card { /* Removed duplicate animation definitions and grouped them */
-  animation: swap 0.6s ease-out both;
+.skills-card {
+  color: var(--rolex-white);
 }
 
-.icon:nth-child(1) .card { animation-delay: 0.1s; }
-.icon:nth-child(2) .card { animation-delay: 0.2s; }
-.icon:nth-child(3) .card { animation-delay: 0.3s; }
-.icon:nth-child(4) .card { animation-delay: 0.4s; }
-.icon:nth-child(5) .card { animation-delay: 0.5s; }
-.icon:nth-child(6) .card { animation-delay: 0.6s; }
-.icon:nth-child(7) .card { animation-delay: 0.7s; }
-.icon:nth-child(8) .card { animation-delay: 0.8s; }
-.icon:nth-child(9) .card { animation-delay: 0.9s; }
-.icon:nth-child(10) .card { animation-delay: 1s; }
-.icon:nth-child(11) .card { animation-delay: 1.1s; }
-.icon:nth-child(12) .card { animation-delay: 1.2s; }
+.skills-card .subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--rolex-white);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
 
-/* Responsive styles */
+.skills-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 0;
+  margin-top: 0;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.skills-list li {
+  margin: 0.5rem 0;
+}
+
 @media (max-width: 768px) {
   .tech-stack {
     padding: 1rem;
@@ -121,6 +122,14 @@
 
   .card span {
     font-size: 0.875rem;
+  }
+
+  .skills-card .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .skills-list {
+    font-size: 0.8rem;
   }
 }
 
@@ -145,10 +154,64 @@
   .card span {
     font-size: 0.75rem;
   }
+
+  .skills-card .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .skills-list {
+    font-size: 0.75rem;
+  }
 }
 
-@media (min-width: 1025px) {
-  .icons {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+@keyframes swap {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) rotateX(180deg);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+.card {
+  animation: swap 0.6s ease-out both;
+}
+
+.icon:nth-child(1) .card {
+  animation-delay: 0.1s;
+}
+.icon:nth-child(2) .card {
+  animation-delay: 0.2s;
+}
+.icon:nth-child(3) .card {
+  animation-delay: 0.3s;
+}
+.icon:nth-child(4) .card {
+  animation-delay: 0.4s;
+}
+.icon:nth-child(5) .card {
+  animation-delay: 0.5s;
+}
+.icon:nth-child(6) .card {
+  animation-delay: 0.6s;
+}
+.icon:nth-child(7) .card {
+  animation-delay: 0.7s;
+}
+.icon:nth-child(8) .card {
+  animation-delay: 0.8s;
+}
+.icon:nth-child(9) .card {
+  animation-delay: 0.9s;
+}
+.icon:nth-child(10) .card {
+  animation-delay: 1s;
+}
+.icon:nth-child(11) .card {
+  animation-delay: 1.1s;
+}
+.icon:nth-child(12) .card {
+  animation-delay: 1.2s;
 }
