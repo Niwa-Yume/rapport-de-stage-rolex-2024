@@ -1,0 +1,58 @@
+.glass-card {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transform: translateZ(0);
+  margin-top: 4rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: scale(1.05);
+}
+
+.tech-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+.tech-card p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #e5e5e5;
+}
+
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .tech-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-card p {
+    font-size: 1rem;
+  }
+}

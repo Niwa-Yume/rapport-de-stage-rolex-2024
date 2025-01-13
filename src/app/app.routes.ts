@@ -9,6 +9,7 @@ import { ExpectationsComponent } from './expectations/expectations.component';
 import { MesTravauxComponent } from './mes-travaux/mes-travaux.component';
 import { ConclusionComponent } from './conclusion/conclusion.component';
 import {TocComponent} from './toc/toc.component';
+import {ImpactComponent} from './impact/impact.component';
 
 export const routes: Routes = [
   {
@@ -45,6 +46,9 @@ export const routes: Routes = [
       },{
         path: 'app-toc',
         component: TocComponent
+      },{
+        path: 'app-impact',
+        component: ImpactComponent
       },
     ]
   }

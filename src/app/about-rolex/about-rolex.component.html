@@ -7,7 +7,6 @@
   </header>
 
   <div class="timeline-container">
-    <h2>Histoire de Rolex</h2>
     <ng-container *ngIf="timelineEvents.length; else noEvents">
       <div class="timeline-event" *ngFor="let event of timelineEvents">
         <span class="year">{{event.year}} -</span>
@@ -19,30 +18,6 @@
     </ng-template>
   </div>
 
-  <section class="internship glass-card" id="internship">
-    <h2 class="subtitle">Impact de mon stage sur mon avenir Professionnel</h2>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <h3>Impact Professionnel</h3>
-        <p>Tests unitaires</p>
-        <p>Modernisation UI/UX</p>
-        <p>Référence dans le CV</p>
-        <p>Méthodes agiles (KANBAN)</p>
-        <p>Écosystème Angular</p>
-        <p>Initiation à Spring Boot et Java (+ création d'un endpoint)</p>
-        <p>Comprendre les besoins dans un Système d'Information énorme tout en pensant à l'interopérabilité du projet/produit</p>
-      </div>
-      <div class="tech-card">
-        <h3>Impact Personnel</h3>
-        <p>Meilleure approche pour la résolution de problèmes</p>
-        <p>Méthodologie et approche pour un problème</p>
-        <p>Meilleure manière de réfléchir</p>
-        <p>Utilisation de nouveaux outils</p>
-        <p>Classification de Nice et National</p>
-        <p>Meilleurs échanges avec des utilisateurs pour comprendre leurs besoins</p>
-        <p>Gérer son rythme de vie</p>
-      </div>
-    </div>
-  </section>
+
 
 </div>
