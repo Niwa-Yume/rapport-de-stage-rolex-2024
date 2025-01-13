@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 
       <div class="content-container">
         <h1 class="title">Rapport de stage en développement web</h1>
-        <p class="subtitle"> Septembre 2024 - Février 2025<br> Julien Castro</p>
+        <p class="subtitle"> Septembre 2024 - Janvier 2025<br> Julien Castro</p>
 
         <div class="quote-container">
           <div class="quote">

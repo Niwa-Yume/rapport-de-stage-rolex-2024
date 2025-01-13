@@ -59,15 +59,12 @@
   transition: transform 0.3s ease;
 }
 
-.responsive-image:hover {
-  transform: scale(1.05);
-}
+
 
 /* Timeline Section */
 .timeline-container {
   flex: 2; /* Permet de prendre plus de place */
   max-width: 50%;
-  padding: 1.5rem;
   border-radius: 1rem;
 }
 
@@ -191,6 +188,3 @@
   border-radius: 10px;
 }
 
-.about-rolex::-webkit-scrollbar-thumb:hover {
-  background: #b88331;
-}
