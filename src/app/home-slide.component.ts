@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
     <div class="hero-container">
 
       <div class="content-container">
-        <h1 class="title">Stage en développement web chez Rolex</h1>
-        <p class="subtitle">Allier innovation digitale et expérience horlogère</p>
+        <h1 class="title">Rapport de stage en développement web</h1>
+        <p class="subtitle"> Septembre 2024 - Février 2025<br> Julien Castro</p>
 
         <div class="quote-container">
           <div class="quote">
@@ -61,7 +61,6 @@ import { CommonModule } from '@angular/common';
     .quote-container {
       max-width: 800px;
       padding: 2rem;
-      border-left: 4px solid #d4af37;
       background: rgba(0,0,0,0.3);
       backdrop-filter: blur(8px);
     }
