@@ -1,3 +1,13 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
 .tech-stack {
   display: flex;
   flex-direction: column;
@@ -15,6 +25,7 @@
   color: var(--rolex-white);
   text-align: center;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .icons {
@@ -22,8 +33,6 @@
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
   width: 100%;
-  max-width: 100%;
-  padding: 0 1rem;
 }
 
 .icon {
@@ -74,16 +83,8 @@
   }
 }
 
-.card {
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  animation: swap 0.6s ease-out;
-  animation-fill-mode: backwards;
+.card { /* Removed duplicate animation definitions and grouped them */
+  animation: swap 0.6s ease-out both;
 }
 
 .icon:nth-child(1) .card { animation-delay: 0.1s; }
@@ -99,7 +100,7 @@
 .icon:nth-child(11) .card { animation-delay: 1.1s; }
 .icon:nth-child(12) .card { animation-delay: 1.2s; }
 
-/* Media query pour les écrans plus petits */
+/* Responsive styles */
 @media (max-width: 768px) {
   .tech-stack {
     padding: 1rem;
@@ -146,14 +147,8 @@
   }
 }
 
-/* Ensure the grid has a maximum of two rows on large screens */
 @media (min-width: 1025px) {
   .icons {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-auto-flow: row;
-    grid-template-rows: repeat(2, 1fr);
-    max-width: 60%;
-    margin: 0 auto;
   }
 }

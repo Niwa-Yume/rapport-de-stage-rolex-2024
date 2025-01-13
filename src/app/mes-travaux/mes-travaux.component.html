@@ -1,16 +1,27 @@
-<h1 class=subtitle>Mes Travaux</h1>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-  <div class="image-card relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105" *ngFor="let img of images">
-    <img [src]="img.src" [alt]="img.alt" class="w-full h-60 object-cover cursor-pointer" (click)="openModal(img)">
+<h1 class="title">Mes Travaux</h1>
+<div class="bento-grid">
+  <div
+    class="bento-item"
+    *ngFor="let img of images; let i = index"
+    (click)="openModal(img)"
+    [ngClass]="{
+      'wide': i === 1,
+      'tall': i === 2,
+      'large': i === 3,
+      'position-5': i === 4,
+      'position-6': i === 5,
+      'position-7': i === 6
+    }"
+  >
+    <img [src]="img.src" [alt]="img.alt" class="bento-image" />
   </div>
 </div>
 
-
 <!-- Modal Structure -->
-<div class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center" *ngIf="isModalOpen">
-  <div class="relative  rounded-lg shadow-lg w-11/12 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 bg-gray-800 overflow-hidden">
-    <button class="close absolute top-2 right-2 text-white text-3xl" (click)="closeModal()">&times;</button>
-    <img class="modal-content w-full h-auto max-h-screen object-contain rounded-t-lg" [src]="modalImageSrc" alt="">
-    <div id="caption" class="text-center text-white p-4">{{ modalImageAlt }}</div>
+<div class="modal" *ngIf="isModalOpen">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img [src]="modalImageSrc" [alt]="modalImageAlt" />
+    <div id="caption">{{ modalImageAlt }}</div>
   </div>
 </div>

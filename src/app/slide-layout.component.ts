@@ -35,7 +35,7 @@ import { CommonModule } from '@angular/common';
       <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
       <label for="menu-icon"></label>
       <nav class="nav">
-        <ul class="pt-5 text-white taille-menu gap-30">
+        <ul class="pt-5 text-white taille-menu">
           <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Accueil</a></li>
           <li><a routerLink="/about-rolex" routerLinkActive="active" (click)="closeMenu()">À propos de Rolex</a></li>
           <li><a routerLink="/app-mission" routerLinkActive="active" (click)="closeMenu()">Ma mission</a></li>
