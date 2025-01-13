@@ -187,9 +187,7 @@ import { CommonModule } from '@angular/common';
       line-height: 1;
       text-align: center;
       -webkit-text-stroke: 2px #ffeba7;
-      text-stroke: 2px #ffeba7;
       -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
       color: transparent;
     }
 
@@ -360,6 +358,10 @@ import { CommonModule } from '@angular/common';
       visibility: hidden;
       transform: translateY(30px);
       transition: all 250ms linear;
+      margin-bottom: 1.25rem;
+    }
+    .nav ul li:last-child {
+      margin-bottom: 0;
     }
 
     .nav ul li:nth-child(1) {
