@@ -35,9 +35,8 @@ import { CommonModule } from '@angular/common';
       <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
       <label for="menu-icon"></label>
       <nav class="nav">
-        <ul class="pt-5 text-white taille-menu">
+        <ul class="pt-5 text-white taille-menu gap-30">
           <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Accueil</a></li>
-          <li><a routerLink="/app-toc" routerLinkActive="active" (click)="closeMenu()">Table des matières</a></li>
           <li><a routerLink="/about-rolex" routerLinkActive="active" (click)="closeMenu()">À propos de Rolex</a></li>
           <li><a routerLink="/app-mission" routerLinkActive="active" (click)="closeMenu()">Ma mission</a></li>
           <li><a routerLink="/tech-stack" routerLinkActive="active" (click)="closeMenu()">Tech stack</a></li>
@@ -511,6 +510,7 @@ import { CommonModule } from '@angular/common';
 export class SlideLayoutComponent implements OnInit {
   isLoading = true;
   initialLoading = false;
+  firstLoad = true;
   previousDisabled = true;
   nextDisabled = false;
   slides = [
@@ -528,12 +528,17 @@ export class SlideLayoutComponent implements OnInit {
   constructor(private router: Router) {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
-        this.isLoading = true;
+        if (this.firstLoad) {
+          this.isLoading = true;
+        }
       } else if (event instanceof NavigationEnd) {
-        setTimeout(() => {
-          this.isLoading = false;// si true = boucle infini
-          this.initialLoading = false;
-        }, 2000); // petit delai
+        if (this.firstLoad) {
+          setTimeout(() => {
+            this.isLoading = false;
+            this.initialLoading = false;
+          }, 2000);
+          this.firstLoad = false;
+        }
         this.updateButtonState();
       }
     });
