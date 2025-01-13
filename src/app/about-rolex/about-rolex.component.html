@@ -1,23 +1,23 @@
 <div class="about-rolex" (scroll)="onScroll($event)">
   <header class="hero">
     <h1 class="title">À propos de Rolex</h1>
+  </header>
+  <!-- Content Container -->
+  <div class="content-container">
     <div class="image-container">
       <img src="rolex batiment.jpg" alt="batiment" class="responsive-image rounded-lg" style="max-height: 55vh;">
     </div>
-  </header>
 
-  <div class="timeline-container">
-    <ng-container *ngIf="timelineEvents.length; else noEvents">
-      <div class="timeline-event" *ngFor="let event of timelineEvents">
-        <span class="year">{{event.year}} -</span>
-        <span class="event-description"> {{event.event}}</span>
-      </div>
-    </ng-container>
-    <ng-template #noEvents>
-      <p>Aucun événement à afficher.</p>
-    </ng-template>
+    <div class="timeline-container">
+      <ng-container *ngIf="timelineEvents.length; else noEvents">
+        <div class="timeline-event" *ngFor="let event of timelineEvents">
+          <span class="year">{{event.year}} -</span>
+          <span class="event-description">{{event.event}}</span>
+        </div>
+      </ng-container>
+      <ng-template #noEvents>
+        <p>Aucun événement à afficher.</p>
+      </ng-template>
+    </div>
   </div>
-
-
-
 </div>

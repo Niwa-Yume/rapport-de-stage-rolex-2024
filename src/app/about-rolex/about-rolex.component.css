@@ -12,7 +12,7 @@
 
 /* Hero Section */
 .hero {
-  height: 60vh;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +39,18 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 45%;
+  margin-right: 2rem; /* Ajout de marge à droite pour éloigner la timeline */
+}
+
 .responsive-image {
   max-width: 100%;
   height: auto;
@@ -53,8 +65,8 @@
 
 /* Timeline Section */
 .timeline-container {
-  max-width: 64rem;
-  margin: 0 auto;
+  flex: 2; /* Permet de prendre plus de place */
+  max-width: 50%;
   padding: 1.5rem;
   border-radius: 1rem;
 }
@@ -101,57 +113,28 @@
   color: #e5e5e5;
 }
 
-/* Internship Section */
-.glass-card {
-  backdrop-filter: blur(16px);
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  transform: translateZ(0);
-  margin-top: 4rem;
-}
+@media (max-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
 
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
+  .content-container {
+    flex-direction: column;
+  }
 
-.tech-card {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 2.5rem;
-  border-radius: 1rem;
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-}
+  .image-container, .timeline-container {
+    max-width: 100%;
+    margin-right: 0;
+  }
 
-.tech-card:hover {
-  transform: scale(1.05);
-}
-
-.tech-card h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #d4af37;
-  margin-bottom: 1rem;
-}
-
-.tech-card p {
-  margin: 1rem 0;
-  font-size: 1.1rem;
-  color: #e5e5e5;
+  .image-container {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
   .title {
     font-size: 2.25rem;
-  }
-
-  .tech-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
   }
 
   .timeline-container {
