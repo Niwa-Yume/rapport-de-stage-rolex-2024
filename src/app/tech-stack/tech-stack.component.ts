@@ -19,10 +19,8 @@ export class TechStackComponent {
     'Primeng': 'https://i0.wp.com/www.primefaces.org/wp-content/uploads/2018/05/primeng-logo.png?ssl=1',
     'Oracle': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg',
     'Jetbrains': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg',
-    'Git': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
     'Gitlab': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg',
     'SpringBoot': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
     'Teams':'https://mailmeteor.com/logos/assets/PNG/Microsoft_Office_Teams_Logo_512px.png',
-    'Bootstrap': 'https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg'
   };
 }

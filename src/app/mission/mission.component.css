@@ -73,7 +73,7 @@ body {
 @media (min-width: 350px) {
   #secondary-modal{
     max-height: 250px;
-    margin-top: 220px;
+    margin-top: 210px;
   }
 
   #secondary-modal .text-lg {
@@ -84,7 +84,7 @@ body {
 @media (min-width: 768px) {
   #secondary-modal{
     max-height: 300px;
-    margin-top: 200px;
+    margin-top: 150px;
   }
   #secondary-modal .text-p {
     font-size: 1rem;
