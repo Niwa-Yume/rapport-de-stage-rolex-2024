@@ -16,7 +16,7 @@ export class MesTravauxComponent {
     { src: 'image (4).png', alt: 'Travail 4' },
     { src: 'image (5).png', alt: 'Travail 5' },
     { src: 'image (6).png', alt: 'Travail 6' },
-    { src: 'https://media.rolex.com/image/upload/q_auto:eco/f_auto/c_limit,w_1920/v1708388531/rolexcom/about-rolex/rolex-history/1905-1919/rolex-history-1905-1919-hans-wilsdorf', alt: 'Travail 7' }
+    { src: 'image (7).png', alt: 'Travail 7' }
   ];
 
   isModalOpen = false;
