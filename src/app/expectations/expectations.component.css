@@ -188,4 +188,7 @@ button:hover {
     padding: 1rem;
     flex: 1 1 100%;
   }
+  .reality-card {
+    margin-bottom: 30px;
+  }
 }

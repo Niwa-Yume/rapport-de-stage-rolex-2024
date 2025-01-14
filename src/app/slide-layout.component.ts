@@ -151,14 +151,14 @@ import { CommonModule } from '@angular/common';
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 0.2em solid green; /* Cursor */
+      border-right: 0.2em solid green; /* changmeent de curseur */
       animation: typeAndDelete 4s steps(11) infinite, blinkCursor 0.5s step-end infinite alternate;
     }
 
-    /* Media Queries and other styles */
+
     @media (max-width: 600px) {
       .terminal-loader {
-        font-size: 1.2em;
+        font-size: 1em;
         padding: 1em;
         width: 12em;
         margin: 50% auto;

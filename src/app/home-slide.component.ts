@@ -90,11 +90,6 @@ import { CommonModule } from '@angular/common';
         margin-top: 15px;
       }
 
-      .hero-image {
-        object-position: center;
-        transform: scale(1.05);
-        max-height: 40vh;
-      }
     }
 
     @media (max-width: 480px) {
@@ -110,16 +105,6 @@ import { CommonModule } from '@angular/common';
         font-size: 0.9rem;
       }
 
-      .hero-image {
-        height: auto;
-        transform: scale(1);
-        max-height: 30vh;
-      }
-
-      .button-container {
-        flex-direction: column;
-      }
-
       .content-container {
         margin-top: 10px;
       }
@@ -127,7 +112,5 @@ import { CommonModule } from '@angular/common';
   `]
 })
 export class HomeSlideComponent {
-  handleImageError(event: any) {
-    event.target.src = 'fallback-image.jpg';
-  }
+
 }

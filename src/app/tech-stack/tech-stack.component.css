@@ -11,8 +11,7 @@
 .tech-stack {
   width: 100%;
   max-width: 1200px;
-  margin: 2rem 0;
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--rolex-green);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -143,8 +142,8 @@
   .card{
     margin-bottom: 1rem;
   }
-  .tech-stack .title {
-    font-size: 1.2rem;
+  .title {
+    font-size: 1rem;
   }
 
   .card {
@@ -163,7 +162,9 @@
   .skills-card .subtitle {
     font-size: 1.2rem;
   }
-
+  .skills-card{
+    margin-bottom: 50px;
+  }
   .skills-list {
     font-size: 0.75rem;
   }

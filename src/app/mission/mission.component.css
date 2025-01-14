@@ -21,6 +21,7 @@
   }
   .title{
     font-size: 2rem;
+    margin-top: 15px;
   }
   .logos{
     display: flex;
