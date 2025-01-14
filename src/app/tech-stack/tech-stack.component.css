@@ -137,7 +137,12 @@
   .tech-stack {
     padding: 0.5rem;
   }
-
+  .icons{
+    gap: 0!important;
+  }
+  .card{
+    margin-bottom: 1rem;
+  }
   .tech-stack .title {
     font-size: 1.2rem;
   }
@@ -214,4 +219,9 @@
 }
 .icon:nth-child(12) .card {
   animation-delay: 1.2s;
+}
+
+
+@media (min-width: 350px) {
+
 }

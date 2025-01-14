@@ -8,10 +8,6 @@
   padding: 1rem;
 }
 
-/* General Styles */
-body {
-  font-family: 'Arial', sans-serif;
-}
 
 #default-modal {
   background-color: var(--rolex-green);
@@ -23,9 +19,18 @@ body {
     max-height: 90vh;
     margin-top: 5vh;
   }
+  .title{
+    font-size: 2rem;
+  }
+  .logos{
+    display: flex;
+  }
+  .uniform-logo{
+    width: 5rem;
+  }
 
   .subtitle {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 
   .croix {

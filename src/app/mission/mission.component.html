@@ -1,4 +1,4 @@
-<button (click)="openDialog()" class="fixed top-5 left-5 button text-white font-extrabold bg-rolex-gold rounded-lg text-sm px-5 py-2.5 text-center" type="button">
+<button (click)="openDialog()" class="fixed top-5 z-10 left-5 button text-white font-extrabold bg-rolex-gold rounded-lg text-sm px-5 py-2.5 text-center" type="button">
   Afficher le sujet de la mission
 </button>
 
@@ -10,7 +10,7 @@
       <!-- SECTION MA MISSION --->
       <div class="content-container text-center rounded-xl p-4 md:p-6 mb-4 md:mb-8 max-h-screen md:max-h-none mt-8">
         <h1 class="title mb-4 text-3xl md:mb-6 md:text-5xl">Ma Mission chez Rolex</h1>
-        <div class="logos flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-4 md:mb-8">
+        <div class="logos flex md:flex-row justify-center items-center gap-4 md:gap-8 mb-4 md:mb-8">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png" alt="AngularJS Logo" class="uniform-logo w-20 h-20 md:w-32 md:h-32">
           <span class="transform-arrow text-2xl font-bold text-yellow-600 hidden md:inline">→</span>
           <img src="https://houseofangular.io/wp-content/uploads/2023/11/AngularLogoGradient-983x1024.png" alt="Angular 18 Logo" class="uniform-logo w-20 h-20 md:w-32 md:h-32">
@@ -78,8 +78,8 @@
       <!-- HEADER -->
       <div class="flex w-full items-center justify-between text-white mb-5">
         <h3 class="text-white subtitle">Informations supplémentaires :</h3>
-        <button type="button" class="w-8 h-8 sm:w-4 sm:h-4 inline-flex justify-center items-center text-white btn-close" (click)="closeSecondDialog()">
-          <svg class="sm:w-2 sm:h-2 croix items-end" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+        <button type="button" class="w-4 h-4 inline-flex justify-center items-center text-white btn-close" (click)="closeSecondDialog()">
+          <svg class="croix items-end" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
           </svg>
         </button>
