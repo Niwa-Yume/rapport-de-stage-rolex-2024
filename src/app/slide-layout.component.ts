@@ -175,9 +175,6 @@ import { CommonModule } from '@angular/common';
         margin-left: 0.3em;
       }
 
-      .terminal-title {
-        font-size: 0.8em;
-      }
     }
 
     h1 {
@@ -396,13 +393,13 @@ import { CommonModule } from '@angular/common';
       transition-delay: 125ms;
     }
 
-    .nav ul li:nth-child(9) { /* Ajoutez cette section pour le 9ème élément */
+    .nav ul li:nth-child(9) {
       transition-delay: 100ms;
     }
 
     .nav ul li a {
       font-family: 'Montserrat', sans-serif;
-      font-size: 5vh; /* adjust font-size for inner scale */
+      font-size: 1.2rem;
       text-transform: uppercase;
       line-height: 1.2;
       font-weight: 800;
@@ -503,9 +500,6 @@ import { CommonModule } from '@angular/common';
         color: #ffeba7;
       }
 
-      .nav ul li a {
-        font-size: 4vh;
-      }
     }
   `]
 })
