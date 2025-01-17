@@ -34,15 +34,15 @@ import { CommonModule } from '@angular/common';
       <!-- MENU DE NAVIGATION --->
       <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
       <label for="menu-icon"></label>
-      <nav class="nav">
+      <nav class="nav z-20 ">
         <ul class="pt-5 text-white taille-menu">
           <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Accueil</a></li>
           <li><a routerLink="/about-rolex" routerLinkActive="active" (click)="closeMenu()">À propos de Rolex</a></li>
           <li><a routerLink="/app-mission" routerLinkActive="active" (click)="closeMenu()">Ma mission</a></li>
-          <li><a routerLink="/tech-stack" routerLinkActive="active" (click)="closeMenu()">Tech stack</a></li>
+          <li><a routerLink="/tech-stack" routerLinkActive="active" (click)="closeMenu()">Stack technologique</a></li>
           <li><a routerLink="/app-mes-travaux" routerLinkActive="active" (click)="closeMenu()">Mes travaux</a></li>
-          <li><a routerLink="/app-expectations" routerLinkActive="active" (click)="closeMenu()">Attente et Réalité</a></li>
-          <li><a routerLink="/app-impact" routerLinkActive="active" (click)="closeMenu()">Impact du stage</a></li>
+          <li><a routerLink="/app-expectations" routerLinkActive="active" (click)="closeMenu()">Les attentes et réalité</a></li>
+          <li><a routerLink="/app-impact" routerLinkActive="active" (click)="closeMenu()">Les impacts du stage</a></li>
           <li><a routerLink="/app-conclusion" routerLinkActive="active" (click)="closeMenu()">Conclusion</a></li>
         </ul>
       </nav>
