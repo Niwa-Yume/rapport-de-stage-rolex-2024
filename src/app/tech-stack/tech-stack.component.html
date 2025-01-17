@@ -1,16 +1,16 @@
-<h1 class="title">Technologies utilisées durant mon stage</h1>
-<div class="tech-stack">
-  <div class="icons">
-    <div class="icon" *ngFor="let tech of techStack">
-      <div class="card">
-        <img [src]="tech.imageUrl" [alt]="tech.name" />
-        <span class="font-bold">{{ tech.name }}</span>
+<section class="flex">
+  <div class="tech-stack">
+    <h1 class="title">Technologies utilisées durant mon stage</h1>
+    <div class="icons">
+      <div class="icon" *ngFor="let tech of techStack">
+        <div class="card">
+          <img [src]="tech.imageUrl" [alt]="tech.name" />
+          <span class="font-bold">{{ tech.name }}</span>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<section>
   <div class="skills-container">
     <div class="skills-card">
       <h1 class="subtitle">Les compétences techniques</h1>

@@ -1,0 +1,39 @@
+<div class="container w-screen">
+  <h2 class="title items-center justify-center w-full">Information complémentaire sur le rapport</h2>
+    <section>
+      <!-- LIGNE 1 --->
+      <div class="flex justify-center items-center gap-5">
+        <div>
+          <div class="outer">
+            <div class="dot"></div>
+            <div class="card">
+              <div class="ray"></div>
+              <div class="text">Quatre personnes ont relu le rapport</div>
+              <div class="line topl"></div>
+              <div class="line leftl"></div>
+              <div class="line bottoml"></div>
+              <div class="line rightl"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Bouton Modal -->
+        <div>
+          <button class="neu-button font-bold" (click)="openModal()">Red Notice sur l'IA</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modale -->
+    <div class="modal-backdrop" *ngIf="isModalVisible" (click)="closeModal()">
+      <div class="modal" (click)="$event.stopPropagation()">
+        <div class="card-neo">
+          <a class="subtitle border-b-2 border-yellow-600 top-0">Info A.I</a>
+          <div class="card-overlay"></div>
+          <div class="card-inner">
+            RolexAi<br> Reformulation de texte<br> Génération de composant simple<br> Effectuer des actions basiques
+          </div>
+        </div>
+        <button class="neu-button font-bold" (click)="closeModal()">Fermer</button>
+      </div>
+    </div>
+</div>

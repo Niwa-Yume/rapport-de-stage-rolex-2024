@@ -10,6 +10,7 @@ import { MesTravauxComponent } from './mes-travaux/mes-travaux.component';
 import { ConclusionComponent } from './conclusion/conclusion.component';
 import {TocComponent} from './toc/toc.component';
 import {ImpactComponent} from './impact/impact.component';
+import {PSComponent} from './ps/ps.component';
 
 export const routes: Routes = [
   {
@@ -49,6 +50,10 @@ export const routes: Routes = [
       },{
         path: 'app-impact',
         component: ImpactComponent
+      },
+      {
+        path: 'app-ps',
+        component: PSComponent
       },
     ]
   }

@@ -41,7 +41,7 @@ import { CommonModule } from '@angular/common';
           <li><a routerLink="/app-mission" routerLinkActive="active" (click)="closeMenu()">Ma mission</a></li>
           <li><a routerLink="/tech-stack" routerLinkActive="active" (click)="closeMenu()">Stack technologique</a></li>
           <li><a routerLink="/app-mes-travaux" routerLinkActive="active" (click)="closeMenu()">Mes travaux</a></li>
-          <li><a routerLink="/app-expectations" routerLinkActive="active" (click)="closeMenu()">Les attentes et réalité</a></li>
+          <li><a routerLink="/app-expectations" routerLinkActive="active" (click)="closeMenu()">Les attentes et la réalité</a></li>
           <li><a routerLink="/app-impact" routerLinkActive="active" (click)="closeMenu()">Les impacts du stage</a></li>
           <li><a routerLink="/app-conclusion" routerLinkActive="active" (click)="closeMenu()">Conclusion</a></li>
         </ul>
@@ -523,6 +523,7 @@ export class SlideLayoutComponent implements OnInit {
     'app-mes-travaux',
     'app-expectations',
     'app-impact',
+    'app-ps',
     'app-conclusion'
   ];
 

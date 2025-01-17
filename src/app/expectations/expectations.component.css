@@ -2,23 +2,20 @@
   height: 100vh;
   width: 100vw;
   color: #fff;
-  padding: 0;
-  margin: 0;
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Modifié pour permettre le défilement si nécessaire */
-  overflow: auto; /* Assurez-vous que le contenu peut défiler si nécessaire */
+  align-items: flex-start;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
-  align-items: flex-start; /* Modifié pour aligner les éléments en haut */
+  align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante sur les petits écrans */
+  flex-wrap: wrap;
   width: 100%;
-  padding: 1rem; /* Ajoute du padding autour du contenu */
-  box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
+  box-sizing: border-box;
 }
 
 .hover-text {
@@ -67,13 +64,13 @@
 .expectations-container, .reality-card {
   border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  padding: 2rem;
+  padding: 1rem;
   flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
+  margin: 0.5rem;
   max-width: 100%;
   box-sizing: border-box;
   text-align: center;
@@ -143,6 +140,9 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  :host{
+    overflow: auto;
+  }
   h1 {
     font-size: 2rem;
   }
@@ -165,8 +165,9 @@ button:hover {
   .expectations-container, .reality-card {
     padding: 1rem;
   }
-
-
+  :host{
+    overflow: auto;
+  }
   .expectations-container, .reality-card {
     height: auto;
     margin-top: 1rem;
@@ -189,6 +190,6 @@ button:hover {
     flex: 1 1 100%;
   }
   .reality-card {
-    margin-bottom: 30px;
+    padding-bottom: 50px;
   }
 }

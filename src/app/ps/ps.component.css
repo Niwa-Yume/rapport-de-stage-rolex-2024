@@ -1,0 +1,487 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow: hidden;
+}
+
+
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: -145%;
+  rotate: -45deg;
+  background: #000;
+  background-image: radial-gradient(4px 100px at 0px 235px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 235px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 117.5px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 252px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 252px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 126px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 150px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 150px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 75px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 253px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 253px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 126.5px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 204px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 204px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 102px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 134px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 134px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 67px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 179px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 179px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 89.5px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 299px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 299px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 149.5px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 215px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 215px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 107.5px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 281px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 281px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 140.5px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 158px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 158px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 79px, #006039 100%, #0000 150%),
+  radial-gradient(4px 100px at 0px 210px, #006039, #0000),
+  radial-gradient(4px 100px at 300px 210px, #006039, #0000),
+  radial-gradient(1.5px 1.5px at 150px 105px, #006039 100%, #0000 150%);
+  background-size: 300px 235px,
+  300px 235px,
+  300px 235px,
+  300px 252px,
+  300px 252px,
+  300px 252px,
+  300px 150px,
+  300px 150px,
+  300px 150px,
+  300px 253px,
+  300px 253px,
+  300px 253px,
+  300px 204px,
+  300px 204px,
+  300px 204px,
+  300px 134px,
+  300px 134px,
+  300px 134px,
+  300px 179px,
+  300px 179px,
+  300px 179px,
+  300px 299px,
+  300px 299px,
+  300px 299px,
+  300px 215px,
+  300px 215px,
+  300px 215px,
+  300px 281px,
+  300px 281px,
+  300px 281px,
+  300px 158px,
+  300px 158px,
+  300px 158px,
+  300px 210px,
+  300px 210px,
+  300px 210px;
+  animation: hi 150s linear infinite;
+  z-index: -1; /* Make sure it's behind other content */
+}
+
+@keyframes hi {
+  0% {
+    background-position: 0px 220px,
+    3px 220px,
+    151.5px 337.5px,
+    25px 24px,
+    28px 24px,
+    176.5px 150px,
+    50px 16px,
+    53px 16px,
+    201.5px 91px,
+    75px 224px,
+    78px 224px,
+    226.5px 350.5px,
+    100px 19px,
+    103px 19px,
+    251.5px 121px,
+    125px 120px,
+    128px 120px,
+    276.5px 187px,
+    150px 31px,
+    153px 31px,
+    301.5px 120.5px,
+    175px 235px,
+    178px 235px,
+    326.5px 384.5px,
+    200px 121px,
+    203px 121px,
+    351.5px 228.5px,
+    225px 224px,
+    228px 224px,
+    376.5px 364.5px,
+    250px 26px,
+    253px 26px,
+    401.5px 105px,
+    275px 75px,
+    278px 75px,
+    426.5px 180px;
+  }
+  100% {
+    background-position: 0px 6800px,
+    3px 6800px,
+    151.5px 6917.5px,
+    25px 13632px,
+    28px 13632px,
+    176.5px 13758px,
+    50px 5416px,
+    53px 5416px,
+    201.5px 5491px,
+    75px 17175px,
+    78px 17175px,
+    226.5px 17301.5px,
+    100px 5119px,
+    103px 5119px,
+    251.5px 5221px,
+    125px 8428px,
+    128px 8428px,
+    276.5px 8495px,
+    150px 9876px,
+    153px 9876px,
+    301.5px 9965.5px,
+    175px 13391px,
+    178px 13391px,
+    326.5px 13540.5px,
+    200px 14741px,
+    203px 14741px,
+    351.5px 14848.5px,
+    225px 18770px,
+    228px 18770px,
+    376.5px 18910.5px,
+    250px 5082px,
+    253px 5082px,
+    401.5px 5161px,
+    275px 6375px,
+    278px 6375px,
+    426.5px 6480px;
+  }
+}
+
+p, section {
+  margin: 0;
+  padding: 1em;
+  width: 80%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 3rem;
+  margin-left: 500px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Épaisseur de la ligne */
+  transition: transform 0.3s;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+.title:hover::after {
+  transform: scaleX(1);
+}
+
+/* Neuomorphism bouton */
+.neu-button {
+  background-color: var(--red-background, #e57373); /* Red background color */
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 10px var(--dark-red, #b71c1c), inset -4px -4px 10px var(--light-red, #ffcdd2);
+  color: white;
+  cursor: pointer;
+  width: max-content;
+  font-size: 18px;
+  padding: 15px 40px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid var(--border-red, #e57373);
+  z-index: 1; /* To appear above the background */
+}
+
+.neu-button:hover {
+  box-shadow: inset 2px 2px 5px var(--dark-red, #b71c1c), inset -2px -2px 5px var(--light-red, #ffcdd2),
+  2px 2px 5px var(--dark-red, #b71c1c), -2px -2px 5px var(--light-red, #ffcdd2);
+}
+
+.neu-button:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px var(--dark-red, #b71c1c), inset -2px -2px 5px var(--light-red, #ffcdd2),
+  2px 2px 5px var(--dark-red, #b71c1c), -2px -2px 5px var(--light-red, #ffcdd2);
+}
+
+/* Card pour viewer */
+.outer {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 1px;
+  position: relative;
+  z-index: 1; /* To appear above the background */
+}
+
+.dot {
+  width: 5px;
+  aspect-ratio: 1;
+  position: absolute;
+  background-color: var(--rolex-white, #ffffff);
+  box-shadow: 0 0 10px var(--rolex-white, #ffffff);
+  border-radius: 100px;
+  z-index: 2;
+  right: 10%;
+  top: 10%;
+  animation: moveDot 6s linear infinite;
+}
+
+@keyframes moveDot {
+  0%, 100% {
+    top: 10%;
+    right: 10%;
+  }
+  25% {
+    top: 10%;
+    right: calc(100% - 35px);
+  }
+  50% {
+    top: calc(100% - 30px);
+    right: calc(100% - 35px);
+  }
+  75% {
+    top: calc(100% - 30px);
+    right: 10%;
+  }
+}
+
+.card {
+  z-index: 1;
+  width: 300px;
+  height: 250px;
+  border-radius: 9px;
+  border: solid 1px var(--rolex-black, #202222);
+  background-size: 20px 20px;
+  background: radial-gradient(circle 280px at 0% 0%, var(--rolex-green, #444444), #0c0d0d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  color: var(--rolex-white, #ffffff);
+}
+
+.ray {
+  width: 220px;
+  height: 45px;
+  border-radius: 100px;
+  position: absolute;
+  background-color: var(--rolex-gold, #c7c7c7);
+  opacity: 0.4;
+  box-shadow: 0 0 50px var(--rolex-gold, #ffffff);
+  filter: blur(10px);
+  transform-origin: 10%;
+  top: 0%;
+  left: 0;
+  transform: rotate(40deg);
+}
+
+.card .text {
+  font-weight: bolder;
+  font-size: 2rem;
+  background: linear-gradient(45deg, var(--rolex-black, #000000) 4%, var(--rolex-white, #ffffff), var(--rolex-black, #000000));
+  background-clip: text;
+  color: transparent;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: var(--rolex-black, #2c2c2c);
+}
+
+.topl {
+  top: 10%;
+  background: linear-gradient(90deg, var(--rolex-grey, #888888) 30%, #1d1f1f 70%);
+}
+
+.bottoml {
+  bottom: 10%;
+}
+
+.leftl {
+  left: 10%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--rolex-grey, #747474) 30%, var(--rolex-black, #222424) 70%);
+}
+
+.rightl {
+  right: 10%;
+  width: 1px;
+  height: 100%;
+}
+
+/* Modal  */
+.card-neo {
+  --bg: var(--rolex-grey, #e8e8e8);
+  --contrast: var(--rolex-grey, #e2e0e0);
+  --grey: var(--rolex-grey, #93a1a1);
+  width: 550px; /* Increase the width */
+  height: 500px; /* Increase the height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid 1px var(--rolex-black, #202222);
+  background: radial-gradient(circle 280px at 0% 0%, var(--rolex-green, #444444), var(--rolex-black, #0c0d0d));
+  position: relative;
+  padding: 9px;
+  border-radius: 35px;
+  z-index: 1001;
+}
+
+.card-neo a {
+  position: absolute;
+  top: 0;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-conic-gradient(var(--bg) 0.0000001%, var(--grey) 0.000104%) 60% 60%/600% 600%;
+  filter: opacity(10%) contrast(105%);
+}
+
+.card-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 30px;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--rolex-white, #c7c4c4);
+  text-align: center;
+  font-family: monospace;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  padding: 2em;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1001; /* Ensure modal content is on top */
+}
+
+
+/* Responsive Design */
+@media only screen and (max-width: 950px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .title{
+    margin-left: 0!important;
+  }
+
+  .neu-button {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+
+  .outer {
+    width: 250px;
+    height: 200px;
+  }
+
+  .card {
+    width: 250px;
+    height: 200px;
+  }
+
+  .card-neo {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .neu-button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+  .title{
+    margin-left: 0!important;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  .card .text {
+    font-size: 1rem !important;
+  }
+
+  .card-neo {
+    width: 250px;
+    height: 450px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .outer, .card {
+    width: 200px;
+    height: 150px;
+  }
+
+  .card-neo {
+    width: 90%;
+    height: 380px;
+    padding: 20px;
+  }
+
+  section div {
+    flex-direction: column;
+  }
+}
