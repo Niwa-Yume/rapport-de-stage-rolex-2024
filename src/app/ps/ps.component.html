@@ -77,20 +77,20 @@
 
   <!-- Second Modal -->
   <div class="modal-backdrop" *ngIf="isSecondModalVisible" (click)="closeSecondModalAndResetToggle($event)">
-    <div class="modal" (click)="$event.stopPropagation()">
+    <div class="modal h-full" (click)="$event.stopPropagation()">
       <div class="card-neo">
         <a class="subtitle border-b-2  top-0">Design du Rapport de Stage</a>
         <div class="card-overlay"></div>
         <div class="card-inner">
           <ul>
             <li>Palette de Couleurs</li>
-            <li>Images et Graphiques</li>
-            <li>Autres composants</li>
+            <li>Images et visuelle</li>
+            <li>Format du site (pas de storytelling)</li>
           </ul>
         </div>
-        <div class="button-container">
-          <button class="neu-button" (click)="closeSecondModalAndResetToggle($event)">Fermer</button>
-        </div>
+      </div>
+      <div class="button-container bottom-0">
+        <button class="neu-button2" (click)="closeSecondModalAndResetToggle($event)">Fermer</button>
       </div>
     </div>
   </div>
