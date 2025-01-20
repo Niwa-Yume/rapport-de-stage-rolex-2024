@@ -257,6 +257,23 @@ p, section {
   border-radius: 35px;
   z-index: 1001;
 }
+.card-neo1 {
+  --bg: var(--rolex-grey, #e8e8e8);
+  --contrast: var(--rolex-grey, #e2e0e0);
+  --grey: var(--rolex-grey, #93a1a1);
+  width: 550px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid 1px var(--rolex-black, #202222);
+  background: radial-gradient(circle 280px at 0% 0%, var(--rolex-green, #444444), var(--rolex-black, #0c0d0d));
+  position: relative;
+  padding: 9px;
+  border-radius: 35px;
+  z-index: 1001;
+}
 
 .card-neo a {
   position: absolute;
@@ -691,20 +708,21 @@ p, section {
   .card .text {
     font-size: 1.4rem;
   }
-
+  .subtitle{
+    margin-top: 50px;
+  }
   .neu-button {
     font-size: 16px;
     padding: 12px 30px;
   }
 
   .outer, .card {
-    width: 80%;
-    height: auto;
+    width: 150px;
+    height: 150px;
   }
 
   .card-neo {
-    width: 90%;
-    height: auto;
+    height: 60vh;
   }
 }
 
@@ -736,16 +754,27 @@ p, section {
     height: auto;
   }
   .subtitle{
-    display: none;
+    font-size: 20px;
+    margin-bottom: 7px;
   }
-  .card .text {
-    font-size: 1.2rem;
-  }
+
   .card  {
     height: 150px;
+  }
+  .card-neo{
+    width: 60vw;
+    height: 250px;
+  }
+  .card-neo1{
+    width: 60vw;
+    height: 350px;
   }
   .card-inner  {
     padding: 0;
     line-height: 1.3!important;
+    font-size: 15px!important;
+  }
+  .card-inner ul {
+       margin-top: 50px;
   }
 }
