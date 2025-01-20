@@ -1,39 +1,97 @@
 <div class="container w-screen">
-  <h2 class="title items-center justify-center w-full">Information sur le rapport</h2>
-    <section>
-      <!-- LIGNE 1 --->
-      <div class="flex justify-center items-center gap-5">
-        <div>
-          <div class="outer">
-            <div class="dot"></div>
-            <div class="card">
-              <div class="ray"></div>
-              <div class="text">4 personnes ont relu le rapport</div>
-              <div class="line topl"></div>
-              <div class="line leftl"></div>
-              <div class="line bottoml"></div>
-              <div class="line rightl"></div>
+  <h2 class="title items-center justify-center w-full">À propos du rapport</h2>
+  <section>
+    <div class="flex-container">
+      <div class="outer flex-item">
+        <div class="dot"></div>
+        <div class="card">
+          <div class="ray"></div>
+          <div class="text">4 personnes ont relu le rapport</div>
+          <div class="line topl"></div>
+          <div class="line leftl"></div>
+          <div class="line bottoml"></div>
+          <div class="line rightl"></div>
+        </div>
+      </div>
+      <div class="flex-item">
+        <button class="neu-button font-bold" (click)="openModal()">Red Notice sur l'IA</button>
+      </div>
+      <div class="flex-item">
+        <label class="toggle-container">
+          <input #toggleInput class="toggle-input" type="checkbox" [checked]="isToggleChecked" (change)="toggleModal()" />
+          <div class="toggle-handle-wrapper">
+            <div class="toggle-handle">
+              <div class="toggle-handle-knob"></div>
+              <div class="toggle-handle-bar-wrapper">
+                <div class="toggle-handle-bar"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Bouton Modal -->
-        <div>
-          <button class="neu-button font-bold" (click)="openModal()">Red Notice sur l'IA</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Modale -->
-    <div class="modal-backdrop" *ngIf="isModalVisible" (click)="closeModal()">
-      <div class="modal" (click)="$event.stopPropagation()">
-        <div class="card-neo">
-          <a class="subtitle border-b-2 border-yellow-600 top-0">Info A.I</a>
-          <div class="card-overlay"></div>
-          <div class="card-inner">
-            RolexAi<br> Reformulation de texte<br> Génération de composant simple<br> Effectuer des actions basiques
+          <div class="toggle-base">
+            <div class="toggle-base-inside"></div>
           </div>
-        </div>
-        <button class="neu-button font-bold" (click)="closeModal()">Fermer</button>
+        </label>
       </div>
     </div>
+  </section>
+
+  <!-- First Modal -->
+  <div class="modal-backdrop" *ngIf="isModalVisible" (click)="closeModal()">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <div class="card-neo">
+        <a class="subtitle border-b-2 border-yellow-600 top-0">Info A.I</a>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <ul>
+            <li>RolexAi</li>
+            <li>Reformulation de texte</li>
+            <li>Génération de composant simple</li>
+            <li>Effectuer des actions basiques</li>
+          </ul>
+        </div>
+        <!-- From Uiverse.io by 0xnihilism -->
+        <div class="button-container">
+          <button class="brutalist-button openai">
+            <div class="openai-logo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="openai-icon"
+              >
+                <path
+                  fill="#10A37F"
+                  d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.8956zm16.0993 3.8558L12.5907 8.3829 14.6108 7.2144a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.3927-.6813zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="button-text">
+              <span>Alimenté par</span>
+              <span>Rolex AI</span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <button class="neu-button font-bold" (click)="closeModal()">Fermer</button>
+    </div>
+  </div>
+
+  <!-- Second Modal -->
+  <div class="modal-backdrop" *ngIf="isSecondModalVisible" (click)="closeSecondModalAndResetToggle($event)">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <div class="card-neo">
+        <a class="subtitle border-b-2 border-yellow-600 top-0">Nouveau Modal</a>
+        <div class="card-overlay"></div>
+        <div class="card-inner">
+          <ul>
+            <li>Information supplémentaire</li>
+            <li>Plus de détails</li>
+            <li>Autres composants</li>
+          </ul>
+        </div>
+        <div class="button-container">
+          <button class="neu-button" (click)="closeSecondModalAndResetToggle($event)">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {NgIf} from '@angular/common';
 
 @Component({
@@ -11,6 +11,10 @@ import {NgIf} from '@angular/common';
 })
 export class PSComponent {
   isModalVisible = false;
+  isSecondModalVisible = false;
+  isToggleChecked = false;
+
+  @ViewChild('toggleInput') toggleInput!: ElementRef<HTMLInputElement>;
 
   openModal() {
     this.isModalVisible = true;
@@ -18,5 +22,27 @@ export class PSComponent {
 
   closeModal() {
     this.isModalVisible = false;
+  }
+
+  toggleModal() {
+    this.isToggleChecked = !this.isToggleChecked; // Toggle l'état du marqueur
+    this.isSecondModalVisible = this.isToggleChecked; // Utilise le marqueur pour définir la visibilité
+  }
+
+  closeSecondModal() {
+    this.isSecondModalVisible = false;
+    this.isToggleChecked = false; // Assurez-vous de réinitialiser le marqueur lorsque la modale se ferme
+  }
+
+  resetToggleSwitch() {
+    // Vérifie si toggleInput a été correctement récupéré avant de l'utiliser.
+    if (this.toggleInput && this.toggleInput.nativeElement) {
+      this.toggleInput.nativeElement.checked = false;
+    }
+  }
+
+  closeSecondModalAndResetToggle(event?: Event) {
+    this.closeSecondModal();
+    this.resetToggleSwitch();
   }
 }
