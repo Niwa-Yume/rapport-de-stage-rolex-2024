@@ -540,7 +540,6 @@ p, section {
 
 
 /** BOUTON GPT **/
-/* From Uiverse.io by 0xnihilism */
 .button-container {
   display: flex;
   justify-content: center;
@@ -715,12 +714,13 @@ p, section {
 @media (max-width: 1024px) {
   .title {
     font-size: 2rem;
-    margin-left: 0;
+    margin-left: 20px;
   }
   .flex-container {
     width: 100%;
-    margin-left: 0;
+    margin-left: 50px;
     margin-top: 1rem;
+    gap: 50px;
   }
   .flex-item {
     width: 100%;
@@ -737,12 +737,10 @@ p, section {
     font-size: 16px;
     padding: 12px 30px;
   }
-
   .outer, .card {
     width: 150px;
     height: 150px;
   }
-
   .card-neo {
     height: 60vh;
   }
@@ -770,7 +768,6 @@ p, section {
     font-size: 14px;
     padding: 10px 20px;
   }
-
   .outer, .card {
     width: 90%;
     height: auto;
@@ -779,7 +776,6 @@ p, section {
     font-size: 20px;
     margin-bottom: 7px;
   }
-
   .card  {
     height: 150px;
   }
