@@ -43,6 +43,7 @@ import { CommonModule } from '@angular/common';
           <li><a routerLink="/app-mes-travaux" routerLinkActive="active" (click)="closeMenu()">Mes travaux</a></li>
           <li><a routerLink="/app-expectations" routerLinkActive="active" (click)="closeMenu()">Les attentes et la réalité</a></li>
           <li><a routerLink="/app-impact" routerLinkActive="active" (click)="closeMenu()">Les impacts du stage</a></li>
+          <li><a routerLink="/app-ps" routerLinkActive="active" (click)="closeMenu()">Info sur le rapport de stage</a></li>
           <li><a routerLink="/app-conclusion" routerLinkActive="active" (click)="closeMenu()">Conclusion</a></li>
         </ul>
       </nav>
