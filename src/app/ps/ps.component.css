@@ -759,7 +759,7 @@ p, section {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    gap:5px;
+    gap:50px;
   }
   .flex-item {
     width: 100%;
