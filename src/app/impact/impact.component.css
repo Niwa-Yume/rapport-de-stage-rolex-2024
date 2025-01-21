@@ -54,8 +54,9 @@
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  margin-top: 1rem;
   color: #ffffff;
+  max-width: 50vw;
+  margin: auto;
 }
 
 .bilan-section {
@@ -68,6 +69,7 @@
 .bilan-text {
   font-size: 1rem;
   line-height: 1.4;
+  margin-top: 1rem;
 }
 
 @media (max-width: 1024px) {
