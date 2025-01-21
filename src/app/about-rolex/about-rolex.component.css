@@ -90,7 +90,23 @@
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.15);
 }
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center aligns items vertically in Flexbox */
+}
 
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyright-text {
+  font-size: 1.5rem;
+  display: inline-block; /* Ensures the text aligns with the image's width */
+  text-align: center;
+}
 .year {
   font-size: 1.5rem;
   font-weight: 700;
@@ -110,22 +126,58 @@
   color: #e5e5e5;
 }
 
-@media (max-width: 1024px) {
-  .title {
-    font-size: 3rem;
+@media (min-width: 1024px) {
+  :host {
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
   }
 
-  .content-container {
+  .about-rolex {
+    height: 100vh;
+    padding-bottom: 0;
+    display: flex;
     flex-direction: column;
   }
 
-  .image-container, .timeline-container {
-    max-width: 100%;
-    margin-right: 0;
+  .hero {
+    height: 15vh;
+    min-height: auto;
+  }
+
+  .content-container {
+    flex: 1;
+    height: 85vh;
+    padding: 1rem;
+    gap: 1rem;
   }
 
   .image-container {
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center aligns items vertically in Flexbox */
+  }
+
+  .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .responsive-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .timeline-container {
+    height: 100%;
+    overflow-y: auto; /* Permet le scroll uniquement dans la timeline */
+    padding-right: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .title {
+    margin-bottom: 1rem;
   }
 }
 

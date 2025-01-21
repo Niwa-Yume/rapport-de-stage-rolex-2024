@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
         <div class="quote-container">
           <div class="quote">
             <img src="https://logowik.com/content/uploads/images/275_rolex.jpg" alt="Logo Rolex" class="intro-image" style="width: 50vh" />
+            <p class="copyright-text">© Rolex</p>
           </div>
         </div>
       </div>
@@ -35,6 +36,12 @@ import { CommonModule } from '@angular/common';
       align-items: center;
     }
 
+    .copyright-text {
+      opacity: 0.7;
+      margin-top: 0.5rem;
+      text-align: center;
+
+    }
 
     .content-container {
       position: relative;
@@ -47,8 +54,6 @@ import { CommonModule } from '@angular/common';
       z-index: 2;
       margin-top: 20px;
     }
-
-
 
     .subtitle {
       font-size: 1.5rem;

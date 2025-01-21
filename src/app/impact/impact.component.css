@@ -2,71 +2,90 @@
   backdrop-filter: blur(16px);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0.75rem;
-  padding: 1.5rem;
+  padding: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transform: translateZ(0);
-  overflow: auto;
   height: 100vh;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .tech-card {
   background: rgba(255, 255, 255, 0.08);
-  padding: 2.5rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   transition: all 0.3s ease;
 }
 
 .tech-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #d4af37;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .tech-card ul {
   list-style-type: disc;
   margin: 0;
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
 }
 
 .tech-card li {
-  margin: 1rem 0;
-  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
   color: #e5e5e5;
 }
 
 .internship .title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
   text-align: center;
 }
 
 .modern-bilan {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0.75rem;
-  padding: 2rem;
-  margin-top: 2rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
   color: #ffffff;
 }
 
 .bilan-section {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  font-size: 1.1rem;
+  gap: 1rem;
+  font-size: 1rem;
 }
 
 .bilan-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .tech-card {
+    padding: 1.5rem;
+  }
+
+  .tech-card li {
+    font-size: 1rem;
+  }
+
+  .bilan-text {
+    font-size: 1rem;
+  }
+
+  .internship .title {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -93,7 +112,8 @@
     font-size: 1rem;
     margin-top: 22px;
   }
+
   .tech-card ul {
-    margin-bottom:40px;
+    margin-bottom: 40px;
   }
 }

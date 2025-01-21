@@ -5,9 +5,11 @@
   <!-- Content Container -->
   <div class="content-container">
     <div class="image-container">
-      <img src="rolex batiment.jpg" alt="batiment" class="responsive-image rounded-lg" style="max-height: 55vh;">
+      <div class="image-wrapper" style="text-align: center;">
+        <img src="rolex batiment.jpg" alt="batiment" class="responsive-image rounded-lg" style="max-height: 55vh;">
+        <p class="copyright-text">© Rolex</p>
+      </div>
     </div>
-
     <div class="timeline-container">
       <ng-container *ngIf="timelineEvents.length; else noEvents">
         <div class="timeline-event" *ngFor="let event of timelineEvents">
