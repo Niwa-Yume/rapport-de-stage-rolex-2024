@@ -16,8 +16,11 @@
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;
+  padding: 0.5rem;
 }
+.reality-title{
 
+}
 .hover-text {
   position: relative;
   cursor: pointer;
@@ -61,7 +64,8 @@
   }
 }
 
-.expectations-container, .reality-card {
+.expectations-container,
+.reality-card {
   border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   padding: 1rem;
@@ -94,7 +98,8 @@ h2 {
   transition: transform 0.3s;
 }
 
-p, li {
+p,
+li {
   line-height: 1.6;
   color: #e5e5e5;
   margin-bottom: 1rem;
@@ -139,10 +144,23 @@ button:hover {
   transform: scale(1.05);
 }
 
+@media (min-width: 1024px) {
+  .container {
+    max-height: 98vh;
+  }
+
+  .expectations-container,
+  .reality-card {
+    max-height: calc(100vh - 2rem);
+
+  }
+}
+
 @media (max-width: 768px) {
-  :host{
+  :host {
     overflow: auto;
   }
+
   h1 {
     font-size: 2rem;
   }
@@ -151,24 +169,30 @@ button:hover {
     font-size: 1.5rem;
   }
 
-  p, li {
+  p,
+  li {
     font-size: 0.9rem;
   }
 
-  .expectations-container, .reality-card {
+  .expectations-container,
+  .reality-card {
     padding: 1.5rem;
     flex: 1 1 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .expectations-container, .reality-card {
+  .expectations-container,
+  .reality-card {
     padding: 1rem;
   }
-  :host{
+
+  :host {
     overflow: auto;
   }
-  .expectations-container, .reality-card {
+
+  .expectations-container,
+  .reality-card {
     height: auto;
     margin-top: 1rem;
   }
@@ -181,11 +205,13 @@ button:hover {
     font-size: 1.3rem;
   }
 
-  p, li {
+  p,
+  li {
     font-size: 0.8rem;
   }
 
-  .expectations-container, .reality-card {
+  .expectations-container,
+  .reality-card {
     padding: 1rem;
     flex: 1 1 100%;
   }

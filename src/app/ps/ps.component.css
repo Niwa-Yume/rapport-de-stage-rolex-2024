@@ -2,20 +2,20 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  overflow: hidden;
 }
 
-.container {
+.my-custom-container {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100vw!important;
   height: 100vh;
   z-index: 0;
+  overflow: hidden;
 }
-.container::before {
+.my-custom-container::before {
   content: "";
   position: absolute;
   inset: -145%;
@@ -71,7 +71,6 @@ html, body {
 }
 p, section {
   margin: 0;
-  padding: 1em;
   width: 80%;
   text-align: center;
   position: relative;
@@ -79,7 +78,6 @@ p, section {
 }
 .title {
   font-size: 3rem;
-  margin-left: 500px;
 }
 .title::after {
   content: "";
@@ -103,7 +101,6 @@ p, section {
   box-shadow: inset 4px 4px 10px #b71c1c, inset -4px -4px 10px #ffcdd2;
   color: white;
   cursor: pointer;
-  width: max-content;
   font-size: 18px;
   padding: 15px 40px;
   transition: all 0.2s ease-in-out;
@@ -129,7 +126,6 @@ p, section {
   box-shadow: inset 4px 4px 10px #002d1c, inset -4px -4px 10px #66b28e;
   color: white;
   cursor: pointer;
-  width: max-content;
   font-size: 18px;
   padding: 15px 40px;
   transition: all 0.2s ease-in-out;
@@ -350,16 +346,18 @@ p, section {
 .flex-container {
   display: flex;
   width: 100%;
-  margin-left: 220px;
+  margin: 0 auto; /* Centre le contenu */
+  gap: 2rem; /* Espace entre les éléments */
+  padding: 1rem;
+  justify-content: space-between;
 }
 
 .flex-item {
-  width: 33vw;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 2rem;
-  margin-top: 1rem;
+  min-width: 0; /* Permet aux éléments de se rétrécir */
 }
 
 
@@ -749,20 +747,20 @@ p, section {
 @media (max-width: 480px) {
   .title {
     font-size: 1.5rem;
-    margin-left: 0;
+    margin-top: 80px;
+    margin-bottom: 0!important;
   }
   .flex-container {
     width: 100%;
-    margin-left: 0;
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 5rem;
+    padding-right: 5rem;
     gap:50px;
   }
   .flex-item {
     width: 100%;
     margin-left: 0;
-    margin-top: 1rem;
   }
   .neu-button {
     font-size: 14px;
@@ -775,6 +773,7 @@ p, section {
   .subtitle{
     font-size: 20px;
     margin-bottom: 7px;
+    margin-top: 0!important;
   }
   .card  {
     height: 150px;
@@ -793,6 +792,6 @@ p, section {
     font-size: 15px!important;
   }
   .card-inner ul {
-       margin-top: 50px;
+    margin-top: 50px;
   }
 }

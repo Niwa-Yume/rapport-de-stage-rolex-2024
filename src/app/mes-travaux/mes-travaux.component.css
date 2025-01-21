@@ -64,6 +64,7 @@
 .position-6 {
   grid-column: 4 / span 1;
   grid-row: 3 / span 1;
+  background: none!important;
 }
 .position-7 {
   grid-column: 4 / span 2;
@@ -87,7 +88,6 @@
 
 .modal-content {
   position: relative;
-  background: #fff;
   padding: 20px;
   border-radius: 10px;
   max-width: 80%;

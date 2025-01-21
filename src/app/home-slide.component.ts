@@ -43,7 +43,6 @@ import { CommonModule } from '@angular/common';
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 0 2rem;
       text-align: center;
       z-index: 2;
       margin-top: 20px;
@@ -60,7 +59,7 @@ import { CommonModule } from '@angular/common';
 
     .quote-container {
       max-width: 800px;
-      padding: 2rem;
+      padding: 1rem;
       background: rgba(0,0,0,0.3);
       backdrop-filter: blur(8px);
     }

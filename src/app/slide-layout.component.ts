@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterOutlet, RouterModule, CommonModule],
   template: `
-    <div class="slide-container">
+    <div class="slide-container ">
       <div class="slide-content" *ngIf="!isLoading">
         <router-outlet></router-outlet>
       </div>

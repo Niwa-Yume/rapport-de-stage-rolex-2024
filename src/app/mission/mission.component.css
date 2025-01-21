@@ -1,69 +1,108 @@
 /* Modal Content Styles */
-.modal-content {
-  width: 85%;
-  font-size: 1rem;
-  overflow-y: auto; /* Allow vertical scrolling */
-  padding: 1rem;
+.hero {
+  overflow-y: hidden;
+  height: fit-content;
 }
 
+.modal-content {
+  height: fit-content;
+  width: 90%;
+  font-size: 1rem;
+  padding: 1rem;
+  max-height: 85vh; /* Empêche le dépassement vertical */
+}
 
+.container {
+  max-height: fit-content;
+}
 
-#default-modal {
-  background-color: var(--rolex-green);
+.title {
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+}
+
+.mission-image {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* Responsive Styles */
-@media (min-width: 350px) {
+@media (max-width: 450px) {
   .modal-content {
     max-height: 90vh;
-    margin-top: 5vh;
+    overflow-y: auto;
   }
-  .title{
+  .hero {
+    margin-top: 5rem;
+  }
+  .title {
     font-size: 1rem;
     margin-top: 15px;
   }
-  .logos{
+  .logos {
     display: flex;
   }
-  .uniform-logo{
-    width: 5rem;
+  .mission-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
+  .uniform-logo {
+    width: 5rem;
+  }
+  .modal-header {
+    display: flex;
+    flex-direction: column;
+  }
   .subtitle {
     font-size: 0.8rem;
   }
-
   .croix {
     font-size: 1.25rem;
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .modal-content {
     max-height: 85vh;
     margin-top: 7.5vh;
+    overflow-y: auto;
   }
-
   .subtitle {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
-
   .croix {
     font-size: 1.5rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .modal-content {
     max-height: 80vh;
     margin-top: 10vh;
+    overflow-y: auto;
   }
-
+  .modal-header {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    max-height: fit-content;
+    overflow: hidden;
+  }
+  .hero {
+    overflow-y: hidden;
+  }
   .subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-  .title{
-    font-size: 3rem;
+  .title {
+    font-size: 2rem;
   }
   .croix {
     font-size: 1.75rem;
