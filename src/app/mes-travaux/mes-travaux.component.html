@@ -21,7 +21,10 @@
 <div class="modal" *ngIf="isModalOpen">
   <div class="modal-content bg-none">
     <span class="close" style="color: #34D399;" (click)="closeModal()">&times;</span>
-    <img [src]="modalImageSrc" [alt]="modalImageAlt" />
+    <img [src]="currentImageSrc" [alt]="modalImageAlt" />
     <div class="caption text-emerald-500">{{ modalImageContext }}</div>
+    <button (click)="toggleImage()" class="toggle-button">
+      Basculer vers {{ isOldVersion ? 'la version actuelle' : 'l\'ancienne version' }}
+    </button>
   </div>
 </div>

@@ -120,6 +120,20 @@
   text-align: center;
   font-size: 1em;
 }
+.toggle-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #34D399;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #2d8b72;
+}
 
 /* Responsive styles */
 @media (max-width: 1200px) {
