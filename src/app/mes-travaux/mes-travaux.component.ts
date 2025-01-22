@@ -43,7 +43,7 @@ export class MesTravauxComponent {
     {
       src: 'image (6).png',
       alt: 'Travail 6',
-      context: 'Ce modal affiche les informations spécifiques à une décision concernant le dépôt d\'une marque ou autre, y compris si la marque a été acceptée, abandonnée, etc. Toutes les informations sont récupérées en fonction de l\'ID de la décision.',
+      context: 'Ce modal sert à comparé le modal old et new et les codes pour la nouvelles entre le header et le footer pour les boutons',
       srcOld: 'old.png'
     },
     {

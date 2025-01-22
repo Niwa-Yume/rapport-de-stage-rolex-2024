@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   color: #000;
   padding: 1rem;
   font-family: 'Arial', sans-serif;
@@ -75,11 +75,14 @@ h1 {
 }
 
 .copyright-text {
-  font-size: 1rem;
-  opacity: 0.8;
-  margin-top: 0.5rem;
-  text-align: center;
-  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /* Responsive styles */
