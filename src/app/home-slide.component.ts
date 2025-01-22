@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
         <div class="quote-container">
           <div class="quote">
             <img src="https://logowik.com/content/uploads/images/275_rolex.jpg" alt="Logo Rolex" class="intro-image" style="width: 50vh" />
-            <p class="copyright-text">© Rolex</p>
+            <p class="copyright-text">© Rolex SA</p>
           </div>
         </div>
       </div>
