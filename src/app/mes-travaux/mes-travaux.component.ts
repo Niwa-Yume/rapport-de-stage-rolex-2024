@@ -32,19 +32,19 @@ export class MesTravauxComponent {
       src: 'image (4).png',
       alt: 'Travail 4',
       context: 'Ce tableau des devises sert à comparer les taux de change par rapport au franc suisse (CHF). Il permet d\'afficher des taux personnalisés en fonction des besoins de l\'entreprise. En outre, vous pouvez voir les taux définis par la comptabilité, qui sont indépendants des taux du marché actuel ou traditionnel.',
-      srcOld: 'image (4).png'
+      srcOld: 'old-devise.png'
     },
     {
       src: 'image (5).png',
       alt: 'Travail 5',
       context: 'Ce tableau permet de gérer les versions des écrans en AngularJS et en Angular moderne. On peut afficher les versions nouvelles (new), anciennes (old), ou les deux, en fonction des besoins des utilisateurs. L\'idée est de faire une transition progressive de tous les écrans vers les nouvelles versions, tout en conservant les anciennes versions en cas de problème avec le code ou les nouveaux écrans, afin de pouvoir revenir aux anciennes versions si nécessaire.',
-      srcOld: 'image (5).png'
+      srcOld: 'https://images.uncyclomedia.co/uncyclopedia/en/thumb/0/0e/No_image.PNG/300px-No_image.PNG'
     },
     {
       src: 'image (6).png',
       alt: 'Travail 6',
       context: 'Ce modal affiche les informations spécifiques à une décision concernant le dépôt d\'une marque ou autre, y compris si la marque a été acceptée, abandonnée, etc. Toutes les informations sont récupérées en fonction de l\'ID de la décision.',
-      srcOld: 'image (6).png'
+      srcOld: 'old.png'
     },
     {
       src: 'image (7).png',
