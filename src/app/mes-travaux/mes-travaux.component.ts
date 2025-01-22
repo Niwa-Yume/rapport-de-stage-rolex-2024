@@ -14,7 +14,7 @@ export class MesTravauxComponent {
       src: 'image (1).png',
       alt: 'Travail 1',
       context: 'Cet écran illustre une règle qui, en cas de création d\'un nouveau délai, informe toutes les personnes possédant un rôle spécifique du nouveau délai. Ces personnes ont alors 2 options : accepter le délai, ou attendre d\'avoir plusieurs délais avant de prendre une décision.',
-      srcOld: 'image (1).png'
+      srcOld: 'old-popup.png'
     },
     {
       src: 'image (2).png',
