@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import { Router, RouterOutlet, RouterModule, NavigationStart, NavigationEnd, Event } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -546,6 +546,15 @@ export class SlideLayoutComponent implements OnInit {
     this.initialLoading = true;
     this.updateButtonState();
   }
+  @HostListener('window:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.key === 'ArrowRight' && !this.nextDisabled) {
+      this.nextSlide();
+    } else if (event.key === 'ArrowLeft' && !this.previousDisabled) {
+      this.previousSlide();
+    }
+  }
+
 
   getCurrentSlideIndex(): number {
     const currentPath = this.router.url.slice(1);
