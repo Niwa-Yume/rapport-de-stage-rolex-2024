@@ -1,211 +1,222 @@
 :host {
   display: flex;
-  min-height: 100vh;
-  padding: 2rem;
-  font-family: 'Arial', sans-serif;
-}
-
-section.flex {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  width: 100%;
-  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur petits écrans */
-}
-
-.tech-stack {
-  flex: 2;
-  background-color: var(--rolex-green);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  padding: 2rem;
-  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  width: 100%;
+  overflow: hidden;
 }
 
-.tech-stack .title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: var(--rolex-white);
+.title {
+  margin: 0!important;
+  padding: 0!important;
   text-align: center;
+  font-size: 2rem!important;
 }
 
-.icons {
+.bento-grid {
   display: grid;
-  /* Définir un nombre fixe de colonnes pour desktop avec une largeur minimale */
-  grid-template-columns: repeat(4, min(100px, 1fr)) !important;
-  gap: 1.5rem;
-  padding: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem; /* Réduit le gap */
+  width: 90%;
+  max-width: 1400px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  height: calc(100vh - 80px); /* Réduit la hauteur réservée */
+  overflow: hidden;
 }
 
+.bento-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  min-height: 100px; /* Hauteur minimum plus petite */
+}
+.bento-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Pour s'assurer que le modal est au-dessus de tout */
+  overflow: hidden;
+}
 
-.card {
-  background-color: var(--rolex-white);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 1.2rem;
+.modal-content {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-  /* Ajouter un effet hover */
+  overflow: hidden;
+}
+
+.modal-content img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
   cursor: pointer;
 }
 
-/* Ajouter un effet hover sur les cartes */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.card img {
-  width: 80px;  /* Augmenter légèrement la taille */
-  height: 80px;
-  object-fit: contain;
-}
-
-.card span {
-  font-size: 1rem; /* Augmenter la taille de la police */
-  color: var(--rolex-black);
-  font-weight: bold;
+.caption {
+  margin-top: 1rem;
   text-align: center;
 }
 
-.skills-container {
-  flex: 1;
-  background-color: var(--rolex-green);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  padding: 2rem;
+.toggle-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #34D399;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
 }
 
-.skills-card .subtitle {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: var(--rolex-gold);
-  border-bottom: 2px solid var(--rolex-white);
-  padding-bottom: 0.5rem;
+.toggle-button:hover {
+  background-color: #2563eb;
+}
+/* Disposition Bento améliorée */
+.wide {
+  grid-column: span 2;
 }
 
-.skills-list {
-  list-style-type: disc;
-  list-style-position: inside;
-  padding-left: 0;
-  color: var(--rolex-white);
+.tall {
+  grid-row: span 2;
 }
 
-.skills-list li {
-  margin: 0.8rem 0;
-  font-size: 1rem;
+.large {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
-/* Breakpoint pour tablettes et petits écrans */
+/* Positionnements spécifiques */
+.bento-item:nth-child(1) {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+}
+
+.bento-item:nth-child(2) {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.bento-item:nth-child(3) {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.bento-item:nth-child(4) {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.bento-item:nth-child(5) {
+  grid-column: 4 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.bento-item:nth-child(6) {
+  grid-column: 1 / span 2;
+  grid-row: 4 / span 1;
+}
+
+.bento-item:nth-child(7) {
+  grid-column: 3 / span 2;
+  grid-row: 4 / span 1;
+}
+
+.bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
-  section.flex {
-    flex-direction: column;
-    gap: 1.5rem;
+  :host {
+    padding: 0.5rem;
   }
 
-  .tech-stack, .skills-container {
-    flex: none;
-    width: 100%;
-    padding: 1.5rem;
-  }
-
-  .tech-stack .title {
-    font-size: 1.5rem;
+  .title {
     margin-bottom: 1rem;
   }
 
-  .icons {
-    grid-template-columns: repeat(3, minmax(90px, 1fr));
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    height: calc(100vh - 100px);
+    overflow: hidden;
   }
 
-  .card {
-    padding: 1.8rem;
-    min-height: 180px;
-  }
-
-  .card img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .card span {
-    font-size: 1rem;
-  }
-
-  .skills-card .subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-  }
-
-  .skills-list li {
-    font-size: 0.9rem;
-    margin: 0.6rem 0;
+  /* Ajustement des positions spécifiques */
+  .bento-item {
+    aspect-ratio: 4/3; /* Ratio plus compact pour 1024px */
   }
 }
 
-/* Breakpoint pour mobiles */
 @media (max-width: 768px) {
-  .icons {
-    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
-    gap: 0.8rem;
+  .bento-grid {
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+    gap: 0.75rem;
   }
 
-  .card {
-    max-width: 150px;
-    padding: 0.8rem;
-    min-height: 150px;
+  .bento-item:nth-child(n) {
+    grid-column: auto / span 1;
+    grid-row: auto / span 1;
   }
 
-  .card img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .card span {
-    font-size: 0.9rem;
-  }
-
-  .skills-card .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .skills-list li {
-    font-size: 0.8rem;
+  .wide, .tall, .large {
+    grid-column: 1 / span 2;
   }
 }
 
-/* Breakpoint pour très petits écrans */
 @media (max-width: 480px) {
-  .icons {
-    grid-template-columns: 1fr; /* 1 colonne */
+  :host {
+    padding: 0.5rem;
+  }
+
+  .bento-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 180px;
     gap: 0.5rem;
   }
 
-  .card {
-    max-width: 120px;
-    padding: 0.6rem;
-    min-height: 120px;
-  }
-
-  .card img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .card span {
-    font-size: 0.8rem;
-  }
-
-  .skills-card .subtitle {
-    font-size: 1rem;
-  }
-
-  .skills-list li {
-    font-size: 0.7rem;
+  .bento-item:nth-child(n),
+  .wide,
+  .tall,
+  .large {
+    grid-column: 1 / -1;
+    grid-row: auto;
   }
 }

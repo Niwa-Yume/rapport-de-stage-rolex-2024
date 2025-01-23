@@ -107,7 +107,7 @@ section.flex {
   }
 
   .icons {
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
     gap: 0.8rem;
   }
 
@@ -137,5 +137,24 @@ section.flex {
   .skills-list li {
     font-size: 0.8rem;
     margin: 0.6rem 0;
+  }
+}
+@media (min-width: 1440px) {
+  .icons {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card span {
+    font-size: 1.2rem;
   }
 }
