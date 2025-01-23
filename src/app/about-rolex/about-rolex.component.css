@@ -147,8 +147,7 @@
 
   .content-container {
     flex: 1;
-    height: 85vh;
-    padding: 1rem;
+    height: 70vh;
     gap: 1rem;
   }
 

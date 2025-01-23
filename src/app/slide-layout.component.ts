@@ -51,7 +51,7 @@ import { CommonModule } from '@angular/common';
   `,
   styles: [`
     .slide-container {
-      height: 80vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -152,30 +152,8 @@ import { CommonModule } from '@angular/common';
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 0.2em solid green; /* changmeent de curseur */
+      border-right: 0.2em solid green;
       animation: typeAndDelete 4s steps(11) infinite, blinkCursor 0.5s step-end infinite alternate;
-    }
-
-
-    @media (max-width: 600px) {
-      .terminal-loader {
-        font-size: 1em;
-        padding: 1em;
-        width: 12em;
-        margin: 50% auto;
-      }
-
-      .terminal-header {
-        height: 1em;
-        padding: 0 0.3em;
-      }
-
-      .control {
-        width: 0.5em;
-        height: 0.5em;
-        margin-left: 0.3em;
-      }
-
     }
 
     h1 {
@@ -292,27 +270,13 @@ import { CommonModule } from '@angular/common';
     }
 
     @keyframes border-transform {
-      0%, 100% {
-        border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-      }
-      14% {
-        border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
-      }
-      28% {
-        border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
-      }
-      42% {
-        border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
-      }
-      56% {
-        border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
-      }
-      70% {
-        border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
-      }
-      84% {
-        border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
-      }
+      0%, 100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+      14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
+      28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; }
+      42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; }
+      56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
+      70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
+      84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
     }
 
     .menu-icon:checked ~ .nav {
@@ -358,45 +322,20 @@ import { CommonModule } from '@angular/common';
       transition: all 250ms linear;
       margin-bottom: 1.25rem;
     }
+
     .nav ul li:last-child {
       margin-bottom: 0;
     }
 
-    .nav ul li:nth-child(1) {
-      transition-delay: 300ms;
-    }
-
-    .nav ul li:nth-child(2) {
-      transition-delay: 275ms;
-    }
-
-    .nav ul li:nth-child(3) {
-      transition-delay: 250ms;
-    }
-
-    .nav ul li:nth-child(4) {
-      transition-delay: 225ms;
-    }
-
-    .nav ul li:nth-child(5) {
-      transition-delay: 200ms;
-    }
-
-    .nav ul li:nth-child(6) {
-      transition-delay: 175ms;
-    }
-
-    .nav ul li:nth-child(7) {
-      transition-delay: 150ms;
-    }
-
-    .nav ul li:nth-child(8) {
-      transition-delay: 125ms;
-    }
-
-    .nav ul li:nth-child(9) {
-      transition-delay: 100ms;
-    }
+    .nav ul li:nth-child(1) { transition-delay: 300ms; }
+    .nav ul li:nth-child(2) { transition-delay: 275ms; }
+    .nav ul li:nth-child(3) { transition-delay: 250ms; }
+    .nav ul li:nth-child(4) { transition-delay: 225ms; }
+    .nav ul li:nth-child(5) { transition-delay: 200ms; }
+    .nav ul li:nth-child(6) { transition-delay: 175ms; }
+    .nav ul li:nth-child(7) { transition-delay: 150ms; }
+    .nav ul li:nth-child(8) { transition-delay: 125ms; }
+    .nav ul li:nth-child(9) { transition-delay: 100ms; }
 
     .nav ul li a {
       font-family: 'Montserrat', sans-serif;
@@ -440,56 +379,67 @@ import { CommonModule } from '@angular/common';
       transition: opacity 350ms ease, transform 250ms ease;
     }
 
-    .menu-icon:checked ~ .nav ul li:nth-child(1) {
-      transition-delay: 1400ms;
-    }
+    .menu-icon:checked ~ .nav ul li:nth-child(1) { transition-delay: 1400ms; }
+    .menu-icon:checked ~ .nav ul li:nth-child(2) { transition-delay: 1480ms; }
+    .menu-icon:checked ~ .nav ul li:nth-child(3) { transition-delay: 1560ms; }
+    .menu-icon:checked ~ .nav ul li:nth-child(4) { transition-delay: 1640ms; }
+    .menu-icon:checked ~ .nav ul li:nth-child(5) { transition-delay: 1720ms; }
+    .menu-icon:checked ~ .nav ul li:nth-child(6) { transition-delay: 1800ms; }
+    .menu-icon:checked ~ .nav ul li:nth-child(7) { transition-delay: 1880ms; }
+    .menu-icon:checked ~ .nav ul li:nth-child(8) { transition-delay: 1960ms; }
+    .menu-icon:checked ~ .nav ul li:nth-child(9) { transition-delay: 2040ms; }
 
-    .menu-icon:checked ~ .nav ul li:nth-child(2) {
-      transition-delay: 1480ms;
-    }
+    /* Breakpoint pour écrans de 1024px */
+    @media screen and (max-width: 1024px) {
+      .nav ul li a {
+        font-size: 1rem;
+      }
+      .slide-container {
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      .terminal-loader {
+        font-size: 2em;
+        width: 16em;
+        margin: 150px auto;
+      }
 
-    .menu-icon:checked ~ .nav ul li:nth-child(3) {
-      transition-delay: 1560ms;
-    }
-
-    .menu-icon:checked ~ .nav ul li:nth-child(4) {
-      transition-delay: 1640ms;
-    }
-
-    .menu-icon:checked ~ .nav ul li:nth-child(5) {
-      transition-delay: 1720ms;
-    }
-
-    .menu-icon:checked ~ .nav ul li:nth-child(6) {
-      transition-delay: 1800ms;
-    }
-
-    .menu-icon:checked ~ .nav ul li:nth-child(7) {
-      transition-delay: 1880ms;
-    }
-
-    .menu-icon:checked ~ .nav ul li:nth-child(8) {
-      transition-delay: 1960ms;
-    }
-
-    .menu-icon:checked ~ .nav ul li:nth-child(9) { /* Ajoutez cette section pour le 9ème élément */
-      transition-delay: 2040ms;
-    }
-
-    .logo img {
-      height: 26px;
-      width: auto;
-      display: block;
-    }
-
-    @media screen and (max-width: 991px) {
       .menu-icon:checked + label,
       .menu-icon:not(:checked) + label {
-        right: 55px;
+        right: 65px;
+        top: 50px;
       }
 
       .nav {
-        right: 30px;
+        right: 40px;
+        top: 25px;
+        width: 70px;
+        height: 70px;
+      }
+
+      h1 {
+        font-size: 8vw;
+      }
+    }
+
+    /* Breakpoint pour tablettes */
+    @media screen and (max-width: 991px) {
+      .menu-icon:checked + label,
+      .menu-icon:not(:checked) + label {
+        right: 45px;
+        top: 45px;
+      }
+
+      .nav {
+        right: 25px;
+        width: 60px;
+        height: 60px;
+      }
+
+      .nav ul li a {
+        font-size: 0.9rem;
       }
 
       h1 {
@@ -501,6 +451,60 @@ import { CommonModule } from '@angular/common';
         color: #ffeba7;
       }
 
+      .terminal-loader {
+        font-size: 1.5em;
+        width: 14em;
+        margin: 100px auto;
+      }
+    }
+
+    /* Breakpoint pour mobiles */
+    @media screen and (max-width: 600px) {
+      .terminal-loader {
+        font-size: 1em;
+        padding: 1em;
+        width: 12em;
+        margin: 50% auto;
+      }
+
+      .terminal-header {
+        height: 1em;
+        padding: 0 0.3em;
+      }
+
+      .control {
+        width: 0.4em;
+        height: 0.4em;
+        margin-left: 0.2em;
+      }
+
+      .nav ul li a {
+        font-size: 0.8rem;
+      }
+
+      .menu-icon:checked + label,
+      .menu-icon:not(:checked) + label {
+        right: 35px;
+        top: 35px;
+        width: 25px;
+        height: 25px;
+      }
+
+      .nav {
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .nav-buttons {
+        bottom: 1rem;
+        gap: 0.5rem;
+      }
+
+      .nav-buttons button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+      }
     }
   `]
 })

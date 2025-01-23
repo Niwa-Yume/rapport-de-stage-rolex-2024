@@ -234,32 +234,3 @@
 }
 
 
-@media only screen and (max-height: 500px) and (orientation: landscape) {
-  .image-container {
-    height: 90vh;
-    width: auto;
-  }
-
-  .modal {
-    height: 90vh;
-    top: 50%;
-  }
-
-  .modal h1 {
-    font-size: 1.2rem;
-  }
-
-  .expectation-item,
-  .reality-item {
-    margin-bottom: 15px;
-  }
-}
-
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min-resolution: 192dpi) {
-  .image-container img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-  }
-}

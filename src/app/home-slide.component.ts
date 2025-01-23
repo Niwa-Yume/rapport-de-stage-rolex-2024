@@ -26,7 +26,6 @@ import { CommonModule } from '@angular/common';
   styles: [`
     .hero-container {
       position: relative;
-      height: 100%;
       width: 100%;
       overflow: hidden;
       color: white;
@@ -52,7 +51,6 @@ import { CommonModule } from '@angular/common';
       align-items: center;
       text-align: center;
       z-index: 2;
-      margin-top: 20px;
     }
 
     .subtitle {
