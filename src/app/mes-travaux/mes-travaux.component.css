@@ -3,7 +3,6 @@
   min-height: 100vh;
   padding: 2rem;
   font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5; /* Optionnel: pour un meilleur contraste */
 }
 
 section.flex {
@@ -34,11 +33,11 @@ section.flex {
 .icons {
   display: grid;
   /* Définir un nombre fixe de colonnes pour desktop avec une largeur minimale */
-  grid-template-columns: repeat(6, minmax(120px, 1fr));
+  grid-template-columns: repeat(4, min(100px, 1fr)) !important;
   gap: 1.5rem;
   padding: 1rem;
-  height: calc(100% - 4rem);
 }
+
 
 .card {
   background-color: var(--rolex-white);
@@ -61,8 +60,8 @@ section.flex {
 }
 
 .card img {
-  width: 60px;  /* Augmenter légèrement la taille */
-  height: 60px;
+  width: 80px;  /* Augmenter légèrement la taille */
+  height: 80px;
   object-fit: contain;
 }
 
