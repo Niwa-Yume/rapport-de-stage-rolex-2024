@@ -1,4 +1,5 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+// expectations.component.ts
+import {AfterViewInit, Component} from '@angular/core';
 
 @Component({
   selector: 'app-expectations',
@@ -6,6 +7,18 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
   styleUrls: ['./expectations.component.css']
 })
 export class ExpectationsComponent implements AfterViewInit {
+  showExpectations = false;
+  showReality = false;
+
+  toggleExpectations() {
+    this.showExpectations = !this.showExpectations;
+    this.showReality = false;
+  }
+
+  toggleReality() {
+    this.showReality = !this.showReality;
+    this.showExpectations = false;
+  }
 
   ngAfterViewInit() {
     const paragraphs = document.querySelectorAll('.hover-text');
@@ -16,5 +29,4 @@ export class ExpectationsComponent implements AfterViewInit {
       }
     });
   }
-
 }
