@@ -63,7 +63,7 @@ import { CommonModule } from '@angular/common';
 
     .nav-buttons {
       position: fixed;
-      bottom: 2rem;
+      bottom: 1.2rem;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
