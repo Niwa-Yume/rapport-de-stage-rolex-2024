@@ -210,6 +210,7 @@
     grid-template-columns: 1fr;
     grid-auto-rows: 180px;
     gap: 0.5rem;
+    overflow: auto;
   }
 
   .bento-item:nth-child(n),

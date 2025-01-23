@@ -1,5 +1,5 @@
 // expectations.component.ts
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-expectations',
@@ -18,6 +18,15 @@ export class ExpectationsComponent implements AfterViewInit {
   toggleReality() {
     this.showReality = !this.showReality;
     this.showExpectations = false;
+  }
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscapeKey(event: KeyboardEvent) {
+    if (this.showExpectations) {
+      this.showExpectations = false;
+    }
+    if (this.showReality) {
+      this.showReality = false;
+    }
   }
 
   ngAfterViewInit() {

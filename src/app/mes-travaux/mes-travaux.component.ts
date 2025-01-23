@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import { NgForOf, NgIf, NgClass } from '@angular/common';
 
 @Component({
@@ -59,6 +59,14 @@ export class MesTravauxComponent {
   modalImageAlt: string | undefined;
   modalImageContext: string | undefined;
   isOldVersion = false;
+
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscapeKey(event: KeyboardEvent) {
+    if (this.isModalOpen) {
+      this.closeModal();
+    }
+  }
+
 
   openModal(image: { src: string; alt: string; context: string; srcOld: string }) {
     this.currentImageSrc = image.src;

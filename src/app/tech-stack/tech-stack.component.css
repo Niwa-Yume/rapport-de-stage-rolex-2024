@@ -158,3 +158,17 @@ section.flex {
     font-size: 1.2rem;
   }
 }
+
+@media (max-width: 480px) {
+  section {
+    display: flex;
+    flex-direction: column!important;
+  }
+  .icons {
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    gap: 0.8rem;
+  }
+  .tech-stack{
+    height: fit-content!important;
+  }
+}

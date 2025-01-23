@@ -1,4 +1,4 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 import {NgIf} from '@angular/common';
 
 @Component({
@@ -15,6 +15,16 @@ export class PSComponent {
   isToggleChecked = false;
 
   @ViewChild('toggleInput') toggleInput!: ElementRef<HTMLInputElement>;
+
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscapeKey(event: KeyboardEvent) {
+    if (this.isSecondModalVisible) {
+      this.closeSecondModalAndResetToggle();
+    }
+    else if (this.isModalVisible) {
+      this.closeModal();
+    }
+  }
 
   openModal() {
     this.isModalVisible = true;

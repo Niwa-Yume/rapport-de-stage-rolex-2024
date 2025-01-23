@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,6 +13,15 @@ import { CommonModule } from '@angular/common';
 export class MissionComponent {
   showDialog = false;
   showSecondDialog = false; // Property for the second modal
+
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscapeKey(event: KeyboardEvent) {
+    if (this.showSecondDialog) {
+      this.closeSecondDialog();
+    } else if (this.showDialog) {
+      this.closeDialog();
+    }
+  }
 
   openDialog() {
     this.showDialog = true;
