@@ -48,7 +48,7 @@
 .image-container {
   flex: 1;
   max-width: 45%;
-  margin-right: 2rem; /* Ajout de marge à droite pour éloigner la timeline */
+  margin-right: 2rem;
 }
 
 .responsive-image {
@@ -63,7 +63,7 @@
 
 /* Timeline Section */
 .timeline-container {
-  flex: 2; /* Permet de prendre plus de place */
+  flex: 2;
   max-width: 50%;
   border-radius: 1rem;
 }
@@ -93,7 +93,7 @@
 .image-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center aligns items vertically in Flexbox */
+  align-items: center;
 }
 
 .image-wrapper {
@@ -104,7 +104,7 @@
 
 .copyright-text {
   font-size: 1.5rem;
-  display: inline-block; /* Ensures the text aligns with the image's width */
+  display: inline-block;
   text-align: center;
 }
 .year {
@@ -129,7 +129,7 @@
 @media (min-width: 1024px) {
   .timeline-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* ou repeat(3, 1fr) selon le nombre d'événements */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     height: auto;
     overflow-y: visible;
@@ -177,21 +177,21 @@
   .content-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre les éléments horizontalement */
+    align-items: center;
     width: 100%;
-    padding: 0 1rem; /* Ajoute un padding sur les côtés */
+    padding: 0 1rem;
   }
 
   .image-container {
-    max-width: 100%; /* Prend toute la largeur disponible */
-    margin-right: 0; /* Supprime la marge droite */
-    margin-bottom: 2rem; /* Ajoute un espacement en bas */
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
   }
 
   .timeline-container {
-    max-width: 100%; /* Prend toute la largeur disponible */
+    max-width: 100%;
     padding: 1rem;
-    margin: 0; /* Supprime les marges */
+    margin: 0;
   }
 
   .timeline-event {
@@ -211,7 +211,6 @@
   }
 }
 
-/* Custom Scrollbar for Webkit Browsers */
 .about-rolex::-webkit-scrollbar {
   width: 10px;
 }
