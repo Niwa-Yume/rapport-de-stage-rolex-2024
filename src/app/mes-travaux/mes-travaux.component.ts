@@ -38,7 +38,7 @@ export class MesTravauxComponent {
       src: 'image (5).png',
       alt: 'Travail 5',
       context: 'Ce tableau permet de gérer les versions des écrans en AngularJS et en Angular moderne. On peut afficher les versions nouvelles (new), anciennes (old), ou les deux, en fonction des besoins des utilisateurs. L\'idée est de faire une transition progressive de tous les écrans vers les nouvelles versions, tout en conservant les anciennes versions en cas de problème avec le code ou les nouveaux écrans, afin de pouvoir revenir aux anciennes versions si nécessaire.',
-      srcOld: 'https://images.uncyclomedia.co/uncyclopedia/en/thumb/0/0e/No_image.PNG/300px-No_image.PNG'
+      srcOld: 'image (5).png' // On remet la même car il existe pas de old hidden page
     },
     {
       src: 'image (6).png',
