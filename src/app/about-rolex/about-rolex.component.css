@@ -127,56 +127,30 @@
 }
 
 @media (min-width: 1024px) {
-  :host {
-    min-height: 100vh;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .about-rolex {
-    height: 100vh;
-    padding-bottom: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero {
-    height: 15vh;
-    min-height: auto;
-  }
-
-  .content-container {
-    flex: 1;
-    height: 70vh;
-    gap: 1rem;
-  }
-
-  .image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center aligns items vertically in Flexbox */
-  }
-
-  .image-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .responsive-image {
-    height: 100%;
-    object-fit: cover;
-  }
-
   .timeline-container {
-    height: 100%;
-    overflow-y: auto; /* Permet le scroll uniquement dans la timeline */
-    padding-right: 1rem;
-    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ou repeat(3, 1fr) selon le nombre d'événements */
+    gap: 1rem;
+    height: auto;
+    overflow-y: visible;
+    max-height: none;
   }
 
-  .title {
-    margin-bottom: 1rem;
+  .timeline-event {
+    margin: 0;
+  }
+  .timeline-event {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .year {
+    font-size: 1.2rem;
+  }
+
+  .event-description {
+    font-size: 0.9rem;
+    line-height: 1.2;
   }
 }
 
@@ -200,12 +174,24 @@
 }
 
 @media (max-width: 480px) {
-  .title {
-    font-size: 1.75rem;
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    width: 100%;
+    padding: 0 1rem; /* Ajoute un padding sur les côtés */
+  }
+
+  .image-container {
+    max-width: 100%; /* Prend toute la largeur disponible */
+    margin-right: 0; /* Supprime la marge droite */
+    margin-bottom: 2rem; /* Ajoute un espacement en bas */
   }
 
   .timeline-container {
-    padding: 2rem 0.5rem;
+    max-width: 100%; /* Prend toute la largeur disponible */
+    padding: 1rem;
+    margin: 0; /* Supprime les marges */
   }
 
   .timeline-event {
