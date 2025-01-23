@@ -1,5 +1,6 @@
-<div class="container" [class.show-overlay]="showExpectations || showReality">
-  <div class="image-container">
+<div class="container flex-col" >
+  <h1 class="title">Mes attentes et la réalité du stage</h1>
+  <div class="image-container " [class.show-overlay]="showExpectations || showReality">
     <img src="https://i.imgflip.com/9hnqq2.jpg" alt="Expectations vs Reality">
     <div class="click-zone expectations-zone" (click)="toggleExpectations()"></div>
     <div class="click-zone reality-zone" (click)="toggleReality()"></div>

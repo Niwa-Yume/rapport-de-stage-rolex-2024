@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-
+  overflow: hidden;
 }
 
 .image-container {
@@ -17,7 +17,6 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-
 }
 
 .image-container img {
@@ -57,11 +56,14 @@
   border-radius: 10px;
   padding: 20px;
   color: white;
+  background-color: rgba(0, 0, 0, 0.95);
 }
-.modal h1{
+
+.modal h1 {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
+
 .modal.visible {
   display: block;
   animation: fadeIn 0.3s ease-in-out;
@@ -93,12 +95,12 @@
   background: rgba(0, 0, 0, 0.7);
   z-index: 999;
 }
-.expectation-item{
+
+.expectation-item,
+.reality-item {
   margin-bottom: 25px;
 }
-.reality-item{
-  margin-bottom: 25px;
-}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -110,13 +112,154 @@
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   .image-container {
     width: 95%;
+    height: 60%;
+    padding-bottom: 50px;
+  }
+  .title{
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+  .modal {
+    width: 95%;
+    padding: 15px;
+    max-height: 85vh;
+  }
+
+  .modal h1 {
+    font-size: 1.2rem;
+  }
+
+  .expectation-item h2,
+  .reality-item h2 {
+    font-size: 1rem;
+  }
+
+  .expectation-item p,
+  .reality-item p {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media only screen and (min-width: 576px) {
+  .image-container {
+    width: 90%;
+    height: 70%;
+  }
+
+  .modal h1 {
+    font-size: 1.3rem;
+  }
+
+  .expectation-item h2,
+  .reality-item h2 {
+    font-size: 1.1rem;
+  }
+
+  .expectation-item p,
+  .reality-item p {
+    font-size: 0.95rem;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .image-container {
+    width: 85%;
+    height: 75%;
   }
 
   .modal {
-    width: 95%;
-    max-height: 90vh;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal h1 {
+    font-size: 1.4rem;
+  }
+
+  .expectation-item h2,
+  .reality-item h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .image-container {
+    width: 80%;
+    height: 80%;
+    padding-bottom: 150px;
+  }
+  .title{
+    font-size: 3rem;
+    margin-top: 40px;
+  }
+  .modal {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  .modal h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .image-container {
+    width: 75%;
+    height: 85%;
+  }
+
+  .modal {
+    width: 70%;
+    max-width: 1000px;
+  }
+}
+
+
+@media only screen and (min-width: 1400px) {
+  .image-container {
+    width: 70%;
+    height: 90%;
+  }
+
+  .modal {
+    width: 60%;
+    max-width: 1200px;
+  }
+}
+
+
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  .image-container {
+    height: 90vh;
+    width: auto;
+  }
+
+  .modal {
+    height: 90vh;
+    top: 50%;
+  }
+
+  .modal h1 {
+    font-size: 1.2rem;
+  }
+
+  .expectation-item,
+  .reality-item {
+    margin-bottom: 15px;
+  }
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+  .image-container img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
 }
