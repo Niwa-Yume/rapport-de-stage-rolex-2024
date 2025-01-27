@@ -13,19 +13,19 @@ export class MesTravauxComponent {
     {
       src: 'image (1).png',
       alt: 'Travail 1',
-      context: 'Cet écran illustre une règle qui, en cas de création d\'un nouveau délai, demande à l\'utlisateur connecté de confirmer les données générées par la règles. Cette règle doit être acceptée.',
+      context: 'Cet écran illustre une règle qui, en cas de création d\'un nouveau délai, demande à l\'utilisateur connecté de confirmer les données générées par la règle. Cette règle doit être acceptée.',
       srcOld: 'old-popup.png'
     },
     {
       src: 'image (2).png',
       alt: 'Travail 2',
-      context: 'Ce tableau affiche tous les délais en attente de traitement, acceptés à partir de la pop-up précédente. Il permet de gérer et de traiter ces délais, tout en affichant toutes les informations pertinentes. Une fois qu\'un délai a été traité, selon les indications de la pop-up que je vous montrerai après, vous cliquez sur le bouton "traité". Si le délai n\'est pas direct, il est déplacé vers le tableau "à contrôler" situé en dessous, où il doit être validé par un autre personne ayant un rôle dédié.',
+      context: 'Ce tableau affiche tous les délais en attente de traitement, acceptés à partir de la pop-up précédente. Il permet de gérer et de traiter ces délais, tout en affichant toutes les informations pertinentes. Une fois qu\'un délai a été traité, selon les indications de la pop-up que je vous montrerai après, vous cliquez sur le bouton "traité". Si le délai n\'est pas direct, il est déplacé vers le tableau "à contrôler" situé en dessous, où il doit être validé par une autre personne ayant un rôle dédié.',
       srcOld: 'old-version-dashboard.png'
     },
     {
       src: 'image (3).png',
       alt: 'Travail 3',
-      context: 'Ce pop-up/modal permet de modifier le délai. Il affiche les différentes informations relatives au délai, y compris des règles spécifiques applicables selon le choix du pays ou groupe de pays. Le gestionnaire peut ajouter des commentaires.',
+      context: 'Ce pop-up/modal permet de modifier le délai. Il affiche les différentes informations relatives au délai, y compris des règles spécifiques applicables selon le choix du pays ou du groupe de pays. Le gestionnaire peut ajouter des commentaires.',
       srcOld: 'dialogue-dashboard.png'
     },
     {
@@ -37,7 +37,7 @@ export class MesTravauxComponent {
     {
       src: 'image (5).png',
       alt: 'Travail 5',
-      context: 'Ce tableau permet de gérer les versions des écrans en AngularJS et en Angular moderne. On peut afficher les versions nouvelles (new), anciennes (old), ou les deux, en fonction des besoins des utilisateurs. L\'idée est de faire une transition progressive de tous les écrans vers les nouvelles versions, tout en conservant les anciennes versions en cas de problème avec le code ou les nouveaux écrans, afin de pouvoir revenir aux anciennes versions si nécessaire.',
+      context: 'Ce tableau permet de gérer les versions des écrans en AngularJS et en Angular moderne. On peut afficher les nouvelles versions (new), les anciennes (old) ou les deux, en fonction des besoins des utilisateurs. L\'idée est de faire une transition progressive de tous les écrans vers les nouvelles versions, tout en conservant les anciennes versions en cas de problème avec le code ou les nouveaux écrans, afin de pouvoir revenir aux anciennes versions si nécessaire.',
       srcOld: 'image (5).png' // On remet la même car il existe pas de old hidden page
     },
     {
